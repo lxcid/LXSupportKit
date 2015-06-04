@@ -11,6 +11,7 @@
 #import "LXDefines.h"
 
 // Pass 0xcccccc and get color #cccccc
+// FIXME: (me@lxcid.com) Maybe we should create a factory method like `+[UIColor colorWithRGB:alpha:]` instead.
 LXSUPPORTKIT_EXTERN UIColor *LXRGB(uint32_t x);
 LXSUPPORTKIT_EXTERN UIColor *LXRGBA(uint32_t x, CGFloat alpha);
 
