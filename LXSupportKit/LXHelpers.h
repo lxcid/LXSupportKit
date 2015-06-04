@@ -14,6 +14,6 @@
 LXSUPPORTKIT_EXTERN UIColor *LXRGB(uint32_t x);
 LXSUPPORTKIT_EXTERN UIColor *LXRGBA(uint32_t x, CGFloat alpha);
 
-LX_INLINE BOOL ORKEqualObjects(id o1, id o2) {
+LX_INLINE BOOL LXEqualObjects(id o1, id o2) {
     return (o1 == o2) || (o1 && o2 && [o1 isEqual:o2]);
 }
