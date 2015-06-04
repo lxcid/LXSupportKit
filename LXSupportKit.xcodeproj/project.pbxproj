@@ -10,6 +10,10 @@
 		ABB3D5A01B20ECF000F2A08A /* LXSupportKit.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB3D59F1B20ECF000F2A08A /* LXSupportKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABB3D5A61B20ECF000F2A08A /* LXSupportKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB3D59A1B20ECF000F2A08A /* LXSupportKit.framework */; };
 		ABB3D5AD1B20ECF000F2A08A /* LXSupportKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D5AC1B20ECF000F2A08A /* LXSupportKitTests.m */; };
+		ABB3D5BC1B20F15400F2A08A /* LXErrors.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB3D5BA1B20F15400F2A08A /* LXErrors.h */; };
+		ABB3D5BD1B20F15400F2A08A /* LXErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D5BB1B20F15400F2A08A /* LXErrors.m */; };
+		ABB3D5C01B20F61100F2A08A /* LXHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB3D5BE1B20F61100F2A08A /* LXHelpers.h */; };
+		ABB3D5C11B20F61100F2A08A /* LXHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D5BF1B20F61100F2A08A /* LXHelpers.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +33,11 @@
 		ABB3D5A51B20ECF000F2A08A /* LXSupportKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LXSupportKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB3D5AB1B20ECF000F2A08A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABB3D5AC1B20ECF000F2A08A /* LXSupportKitTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LXSupportKitTests.m; sourceTree = "<group>"; };
+		ABB3D5B91B20EE9B00F2A08A /* LXDefines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXDefines.h; sourceTree = "<group>"; };
+		ABB3D5BA1B20F15400F2A08A /* LXErrors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXErrors.h; sourceTree = "<group>"; };
+		ABB3D5BB1B20F15400F2A08A /* LXErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXErrors.m; sourceTree = "<group>"; };
+		ABB3D5BE1B20F61100F2A08A /* LXHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXHelpers.h; sourceTree = "<group>"; };
+		ABB3D5BF1B20F61100F2A08A /* LXHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXHelpers.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +80,11 @@
 		ABB3D59C1B20ECF000F2A08A /* LXSupportKit */ = {
 			isa = PBXGroup;
 			children = (
+				ABB3D5B91B20EE9B00F2A08A /* LXDefines.h */,
+				ABB3D5BA1B20F15400F2A08A /* LXErrors.h */,
+				ABB3D5BB1B20F15400F2A08A /* LXErrors.m */,
+				ABB3D5BE1B20F61100F2A08A /* LXHelpers.h */,
+				ABB3D5BF1B20F61100F2A08A /* LXHelpers.m */,
 				ABB3D59F1B20ECF000F2A08A /* LXSupportKit.h */,
 				ABB3D59D1B20ECF000F2A08A /* Supporting Files */,
 			);
@@ -110,6 +124,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABB3D5A01B20ECF000F2A08A /* LXSupportKit.h in Headers */,
+				ABB3D5BC1B20F15400F2A08A /* LXErrors.h in Headers */,
+				ABB3D5C01B20F61100F2A08A /* LXHelpers.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -209,6 +225,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABB3D5BD1B20F15400F2A08A /* LXErrors.m in Sources */,
+				ABB3D5C11B20F61100F2A08A /* LXHelpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,6 +416,7 @@
 				ABB3D5B21B20ECF000F2A08A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		ABB3D5B31B20ECF000F2A08A /* Build configuration list for PBXNativeTarget "LXSupportKitTests" */ = {
 			isa = XCConfigurationList;
@@ -406,6 +425,7 @@
 				ABB3D5B51B20ECF000F2A08A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
