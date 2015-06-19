@@ -30,4 +30,12 @@ class LXHelpersTests: XCTestCase {
         XCTAssertFalse(LXEqualObjects(1, 2))
         XCTAssertFalse(LXEqualObjects("Hello", "World"))
     }
+    
+    func testDoubleEqual() {
+        XCTAssertTrue(LXDoubleEqual(0.9876 - (0.9 + 0.0876), 0.0))
+        XCTAssertTrue(LXDoubleEqual(0.012345 + 0.087655, 0.1))
+        XCTAssertTrue(LXDoubleEqual(0.35 - 0.15, 0.2))
+        XCTAssertTrue(LXDoubleEqual(0.1 * 3.0, 0.3))
+        XCTAssertTrue(LXDoubleEqual(1.2 / 3.0, 0.4))
+    }
 }

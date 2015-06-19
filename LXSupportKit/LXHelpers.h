@@ -21,4 +21,6 @@ LX_INLINE BOOL LXEqualObjects(id __nullable o1, id __nullable o2) {
     return (o1 == o2) || (o1 && o2 && [o1 isEqual:o2]);
 }
 
+LXSUPPORTKIT_EXTERN BOOL LXDoubleEqual(double x, double y);
+
 NS_ASSUME_NONNULL_END

@@ -18,3 +18,8 @@ UIColor *LXRGBA(uint32_t x, CGFloat alpha) {
 UIColor *LXRGB(uint32_t x) {
     return LXRGBA(x, 1.0);
 }
+
+BOOL LXDoubleEqual(double x, double y) {
+    static double K = 1;
+    return (fabs(x-y) < K * DBL_EPSILON * fabs(x+y) || fabs(x-y) < DBL_MIN);
+}
