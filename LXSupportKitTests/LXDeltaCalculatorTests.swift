@@ -15,69 +15,78 @@ class LXDeltaCalculatorTests: XCTestCase {
         
         let defaultCalculator = LXDeltaCalculator.defaultCalculator()
         
-        do {
+        // FIXME: (me@lxcid.com) Use `do {}` instead.
+        func testNilNil() {
             let delta = defaultCalculator.deltaFromOldArray(nil, toNewArray: nil)
             XCTAssertTrue(delta.addedIndices.count == 0)
             XCTAssertTrue(delta.removedIndices.count == 0)
             XCTAssertTrue(delta.movedIndexPairs.count == 0)
             XCTAssertTrue(delta.unchangedIndexPairs.count == 0)
         }
+        testNilNil()
         
-        do {
+        func testEmptyEmpty() {
             let delta = defaultCalculator.deltaFromOldArray([], toNewArray: [])
             XCTAssertTrue(delta.addedIndices.count == 0)
             XCTAssertTrue(delta.removedIndices.count == 0)
             XCTAssertTrue(delta.movedIndexPairs.count == 0)
             XCTAssertTrue(delta.unchangedIndexPairs.count == 0)
         }
+        testEmptyEmpty()
         
-        do {
+        func testNilEmpty() {
             let delta = defaultCalculator.deltaFromOldArray(nil, toNewArray: [])
             XCTAssertTrue(delta.addedIndices.count == 0)
             XCTAssertTrue(delta.removedIndices.count == 0)
             XCTAssertTrue(delta.movedIndexPairs.count == 0)
             XCTAssertTrue(delta.unchangedIndexPairs.count == 0)
         }
+        testNilEmpty()
         
-        do {
+        func testEmptyNil() {
             let delta = defaultCalculator.deltaFromOldArray([], toNewArray: nil)
             XCTAssertTrue(delta.addedIndices.count == 0)
             XCTAssertTrue(delta.removedIndices.count == 0)
             XCTAssertTrue(delta.movedIndexPairs.count == 0)
             XCTAssertTrue(delta.unchangedIndexPairs.count == 0)
         }
+        testEmptyNil()
         
-        do {
+        func testNilNew() {
             let delta = defaultCalculator.deltaFromOldArray(nil, toNewArray: newArray)
             XCTAssertTrue(delta.addedIndices.count == 7)
             XCTAssertTrue(delta.removedIndices.count == 0)
             XCTAssertTrue(delta.movedIndexPairs.count == 0)
             XCTAssertTrue(delta.unchangedIndexPairs.count == 0)
         }
+        testNilNew()
         
-        do {
+        func testEmptyNew() {
             let delta = defaultCalculator.deltaFromOldArray([], toNewArray: newArray)
             XCTAssertTrue(delta.addedIndices.count == 7)
             XCTAssertTrue(delta.removedIndices.count == 0)
             XCTAssertTrue(delta.movedIndexPairs.count == 0)
             XCTAssertTrue(delta.unchangedIndexPairs.count == 0)
         }
+        testEmptyNew()
         
-        do {
+        func testOldNil() {
             let delta = defaultCalculator.deltaFromOldArray(oldArray, toNewArray: nil)
             XCTAssertTrue(delta.addedIndices.count == 0)
             XCTAssertTrue(delta.removedIndices.count == 3)
             XCTAssertTrue(delta.movedIndexPairs.count == 0)
             XCTAssertTrue(delta.unchangedIndexPairs.count == 0)
         }
+        testOldNil()
         
-        do {
+        func testOldEmpty() {
             let delta = defaultCalculator.deltaFromOldArray(oldArray, toNewArray: [])
             XCTAssertTrue(delta.addedIndices.count == 0)
             XCTAssertTrue(delta.removedIndices.count == 3)
             XCTAssertTrue(delta.movedIndexPairs.count == 0)
             XCTAssertTrue(delta.unchangedIndexPairs.count == 0)
         }
+        testOldEmpty()
     }
     
     func testInsertion() {
