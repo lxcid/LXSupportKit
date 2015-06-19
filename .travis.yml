@@ -1,0 +1,10 @@
+language: objective-c
+
+install:
+  - bundle install --without=documentation
+
+script:
+  - xcodebuild test -project LXSupportKit.xcodeproj -scheme LXSupportKit -sdk iphonesimulator
+
+after_success:
+  - bundle exec slather
