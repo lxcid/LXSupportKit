@@ -15,6 +15,11 @@
 		ABB3D5C01B20F61100F2A08A /* LXHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB3D5BE1B20F61100F2A08A /* LXHelpers.h */; };
 		ABB3D5C11B20F61100F2A08A /* LXHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D5BF1B20F61100F2A08A /* LXHelpers.m */; };
 		ABF505491B33BCC30077C616 /* LXHelpersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF505481B33BCC30077C616 /* LXHelpersTests.swift */; };
+		ABF5054E1B33C4D20077C616 /* LXDelta.h in Headers */ = {isa = PBXBuildFile; fileRef = ABF5054A1B33C4D20077C616 /* LXDelta.h */; };
+		ABF5054F1B33C4D20077C616 /* LXDelta.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF5054B1B33C4D20077C616 /* LXDelta.m */; };
+		ABF505501B33C4D20077C616 /* LXDeltaCalculator.h in Headers */ = {isa = PBXBuildFile; fileRef = ABF5054C1B33C4D20077C616 /* LXDeltaCalculator.h */; };
+		ABF505511B33C4D20077C616 /* LXDeltaCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF5054D1B33C4D20077C616 /* LXDeltaCalculator.m */; };
+		ABF505531B33C59A0077C616 /* LXDeltaCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF505521B33C59A0077C616 /* LXDeltaCalculatorTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -41,6 +46,11 @@
 		ABB3D5BF1B20F61100F2A08A /* LXHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXHelpers.m; sourceTree = "<group>"; };
 		ABF505471B33BCC20077C616 /* LXSupportKitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LXSupportKitTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		ABF505481B33BCC30077C616 /* LXHelpersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXHelpersTests.swift; sourceTree = "<group>"; };
+		ABF5054A1B33C4D20077C616 /* LXDelta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDelta.h; sourceTree = "<group>"; };
+		ABF5054B1B33C4D20077C616 /* LXDelta.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDelta.m; sourceTree = "<group>"; };
+		ABF5054C1B33C4D20077C616 /* LXDeltaCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDeltaCalculator.h; sourceTree = "<group>"; };
+		ABF5054D1B33C4D20077C616 /* LXDeltaCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDeltaCalculator.m; sourceTree = "<group>"; };
+		ABF505521B33C59A0077C616 /* LXDeltaCalculatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXDeltaCalculatorTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +94,10 @@
 			isa = PBXGroup;
 			children = (
 				ABB3D5B91B20EE9B00F2A08A /* LXDefines.h */,
+				ABF5054A1B33C4D20077C616 /* LXDelta.h */,
+				ABF5054B1B33C4D20077C616 /* LXDelta.m */,
+				ABF5054C1B33C4D20077C616 /* LXDeltaCalculator.h */,
+				ABF5054D1B33C4D20077C616 /* LXDeltaCalculator.m */,
 				ABB3D5BA1B20F15400F2A08A /* LXErrors.h */,
 				ABB3D5BB1B20F15400F2A08A /* LXErrors.m */,
 				ABB3D5BE1B20F61100F2A08A /* LXHelpers.h */,
@@ -105,9 +119,10 @@
 		ABB3D5A91B20ECF000F2A08A /* LXSupportKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				ABF505471B33BCC20077C616 /* LXSupportKitTests-Bridging-Header.h */,
-				ABB3D5AC1B20ECF000F2A08A /* LXSupportKitTests.m */,
+				ABF505521B33C59A0077C616 /* LXDeltaCalculatorTests.swift */,
 				ABF505481B33BCC30077C616 /* LXHelpersTests.swift */,
+				ABB3D5AC1B20ECF000F2A08A /* LXSupportKitTests.m */,
+				ABF505471B33BCC20077C616 /* LXSupportKitTests-Bridging-Header.h */,
 				ABB3D5AA1B20ECF000F2A08A /* Supporting Files */,
 			);
 			path = LXSupportKitTests;
@@ -128,7 +143,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABF505501B33C4D20077C616 /* LXDeltaCalculator.h in Headers */,
 				ABB3D5A01B20ECF000F2A08A /* LXSupportKit.h in Headers */,
+				ABF5054E1B33C4D20077C616 /* LXDelta.h in Headers */,
 				ABB3D5BC1B20F15400F2A08A /* LXErrors.h in Headers */,
 				ABB3D5C01B20F61100F2A08A /* LXHelpers.h in Headers */,
 			);
@@ -231,7 +248,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABF5054F1B33C4D20077C616 /* LXDelta.m in Sources */,
 				ABB3D5BD1B20F15400F2A08A /* LXErrors.m in Sources */,
+				ABF505511B33C4D20077C616 /* LXDeltaCalculator.m in Sources */,
 				ABB3D5C11B20F61100F2A08A /* LXHelpers.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -240,6 +259,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABF505531B33C59A0077C616 /* LXDeltaCalculatorTests.swift in Sources */,
 				ABF505491B33BCC30077C616 /* LXHelpersTests.swift in Sources */,
 				ABB3D5AD1B20ECF000F2A08A /* LXSupportKitTests.m in Sources */,
 			);
