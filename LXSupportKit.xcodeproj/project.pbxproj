@@ -14,6 +14,7 @@
 		ABB3D5BD1B20F15400F2A08A /* LXErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D5BB1B20F15400F2A08A /* LXErrors.m */; };
 		ABB3D5C01B20F61100F2A08A /* LXHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB3D5BE1B20F61100F2A08A /* LXHelpers.h */; };
 		ABB3D5C11B20F61100F2A08A /* LXHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D5BF1B20F61100F2A08A /* LXHelpers.m */; };
+		ABF505491B33BCC30077C616 /* LXHelpersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF505481B33BCC30077C616 /* LXHelpersTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,8 @@
 		ABB3D5BB1B20F15400F2A08A /* LXErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXErrors.m; sourceTree = "<group>"; };
 		ABB3D5BE1B20F61100F2A08A /* LXHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXHelpers.h; sourceTree = "<group>"; };
 		ABB3D5BF1B20F61100F2A08A /* LXHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXHelpers.m; sourceTree = "<group>"; };
+		ABF505471B33BCC20077C616 /* LXSupportKitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LXSupportKitTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		ABF505481B33BCC30077C616 /* LXHelpersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXHelpersTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +105,9 @@
 		ABB3D5A91B20ECF000F2A08A /* LXSupportKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				ABF505471B33BCC20077C616 /* LXSupportKitTests-Bridging-Header.h */,
 				ABB3D5AC1B20ECF000F2A08A /* LXSupportKitTests.m */,
+				ABF505481B33BCC30077C616 /* LXHelpersTests.swift */,
 				ABB3D5AA1B20ECF000F2A08A /* Supporting Files */,
 			);
 			path = LXSupportKitTests;
@@ -174,6 +179,7 @@
 		ABB3D5911B20ECF000F2A08A /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = lxcid;
 				TargetAttributes = {
@@ -234,6 +240,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ABF505491B33BCC30077C616 /* LXHelpersTests.swift in Sources */,
 				ABB3D5AD1B20ECF000F2A08A /* LXSupportKitTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -370,6 +377,7 @@
 		ABB3D5B41B20ECF000F2A08A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -381,12 +389,15 @@
 				INFOPLIST_FILE = LXSupportKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LXSupportKitTests/LXSupportKitTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
 		ABB3D5B51B20ECF000F2A08A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -394,6 +405,7 @@
 				INFOPLIST_FILE = LXSupportKitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LXSupportKitTests/LXSupportKitTests-Bridging-Header.h";
 			};
 			name = Release;
 		};
