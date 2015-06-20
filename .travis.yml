@@ -3,13 +3,10 @@ osx_image: beta-xcode6.3
 language: objective-c
 xcode_project: LXSupportKit.xcodeproj
 xcode_scheme: LXSupportKit
-xcode_sdk: iphonesimulator8.1
+xcode_sdk: iphonesimulator
 
-install:
+before_install:
   - bundle install --without=documentation
-#
-# script:
-#   - xcodebuild test -project LXSupportKit.xcodeproj -scheme LXSupportKit -sdk iphonesimulator
 
 after_success:
   - bundle exec slather
