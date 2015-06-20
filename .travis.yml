@@ -1,9 +1,14 @@
 # http://docs.travis-ci.com/user/languages/objective-c/
-osx_image: beta-xcode6.3
 language: objective-c
+osx_image: beta-xcode6.3
 xcode_project: LXSupportKit.xcodeproj
 xcode_scheme: LXSupportKit
 xcode_sdk: iphonesimulator
+
+before_install:
+  - brew unlink xctool
+  - brew update
+  - brew install xctool
 
 install:
   - bundle install --without=documentation
