@@ -10,14 +10,7 @@
 
 #import "LXDelta.h"
 
-const lx_delta_calculator_equality_test_t LXDeltaCalculatorDefaultEqualityTest = ^BOOL(id a, id b) {
-    return [a isEqual:b];
-};
-
 @interface LXDeltaCalculator ()
-
-@property (nonatomic, copy) lx_delta_calculator_equality_test_t equalityTest;
-
 @end
 
 @implementation LXDeltaCalculator
@@ -32,18 +25,9 @@ const lx_delta_calculator_equality_test_t LXDeltaCalculatorDefaultEqualityTest =
     return defaultCalculator;
 }
 
-+ (instancetype)deltaCalculatorWithEqualityTest:(lx_delta_calculator_equality_test_t)equalityTest {
-    return [[LXDeltaCalculator alloc] initWithEqualityTest:equalityTest];
-}
-
 - (instancetype)init {
-    return [self initWithEqualityTest:LXDeltaCalculatorDefaultEqualityTest];
-}
-
-- (instancetype)initWithEqualityTest:(lx_delta_calculator_equality_test_t)equalityTest {
     self = [super init];
     if (self) {
-        _equalityTest = [equalityTest copy];
     }
     return self;
 }

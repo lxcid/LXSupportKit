@@ -167,14 +167,14 @@ class LXDeltaCalculatorTests: XCTestCase {
     }
     
     func testMove() {
-        let oldArray = [0, 1, 2, 3, 4, 5]
+        let oldArray = [0, 1, 2, 3, 4, 5, 6]
         let newArray = [2, 5, 0, 3, 4, 1]
         
         let defaultCalculator = LXDeltaCalculator.defaultCalculator()
         
         let delta = defaultCalculator.deltaFromOldArray(oldArray, toNewArray: newArray)
         XCTAssertTrue(delta.addedIndices.count == 0)
-        XCTAssertTrue(delta.removedIndices.count == 0)
+        XCTAssertTrue(delta.removedIndices.count == 1)
         XCTAssertTrue(delta.movedIndexPairs.count == 4)
         XCTAssertTrue(delta.unchangedIndexPairs.count == 2)
     }

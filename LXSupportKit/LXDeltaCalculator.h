@@ -20,10 +20,6 @@ extern const lx_delta_calculator_equality_test_t LXDeltaCalculatorDefaultEqualit
 
 + (instancetype)defaultCalculator;
 
-+ (instancetype)deltaCalculatorWithEqualityTest:(lx_delta_calculator_equality_test_t)equalityTest;
-
-- (instancetype)initWithEqualityTest:(lx_delta_calculator_equality_test_t)equalityTest;
-
 /**
  Resolve differences between two versions of an array.
  
