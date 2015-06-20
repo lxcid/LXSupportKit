@@ -63,19 +63,21 @@
     oldArrayMutableCopy = [oldArray mutableCopy] ?: [[NSMutableArray alloc] init];
     NSMutableArray *unchangedIndexPairs = [NSMutableArray array];
     NSMutableArray *movedIndexPairs = [NSMutableArray array];
+    // Looping through every element in the new array…
     for (NSUInteger indexInNewArray = 0; indexInNewArray < newArray.count; indexInNewArray++) {
         id objectInNewArray = newArray[indexInNewArray];
+        // Search old array for current element in new array…
         NSUInteger indexInOldArray = [oldArrayMutableCopy indexOfObject:objectInNewArray];
+        // If not found, the current element is inserted.
         if (indexInOldArray == NSNotFound) {
             // Ignore Inserted
             continue;
         } else {
+            // Found, pull the current element out of the search operation…
             [oldArrayMutableCopy replaceObjectAtIndex:indexInOldArray withObject:[NSNull null]];
         }
-        if ([deletedIndices containsIndex:indexInOldArray]) {
-            // Ignore Deleted
-            continue;
-        }
+        NSAssert(![deletedIndices containsIndex:indexInOldArray],
+                 @"Delete indices are index of elements in old array not found in new array, so we should never iterates over any of them.");
         
         NSUInteger previousInsertedCount = [insertedIndices countOfIndexesInRange:NSMakeRange(0, indexInNewArray + 1)];
         NSUInteger previousDeletedCount = [deletedIndices countOfIndexesInRange:NSMakeRange(0, indexInOldArray + 1)];
