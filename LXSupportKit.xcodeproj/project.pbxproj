@@ -17,6 +17,9 @@
 		ABB3D5BD1B20F15400F2A08A /* LXErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D5BB1B20F15400F2A08A /* LXErrors.m */; };
 		ABB3D5C01B20F61100F2A08A /* LXHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB3D5BE1B20F61100F2A08A /* LXHelpers.h */; };
 		ABB3D5C11B20F61100F2A08A /* LXHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D5BF1B20F61100F2A08A /* LXHelpers.m */; };
+		ABE85AF81B35FDF50047EFF1 /* LXScrollViewObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = ABE85AF61B35FDF50047EFF1 /* LXScrollViewObserver.h */; };
+		ABE85AF91B35FDF50047EFF1 /* LXScrollViewObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE85AF71B35FDF50047EFF1 /* LXScrollViewObserver.m */; };
+		ABE85AFB1B35FF310047EFF1 /* LXScrollViewObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE85AFA1B35FF310047EFF1 /* LXScrollViewObserverTests.swift */; };
 		ABF505491B33BCC30077C616 /* LXHelpersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABF505481B33BCC30077C616 /* LXHelpersTests.swift */; };
 		ABF5054E1B33C4D20077C616 /* LXDelta.h in Headers */ = {isa = PBXBuildFile; fileRef = ABF5054A1B33C4D20077C616 /* LXDelta.h */; };
 		ABF5054F1B33C4D20077C616 /* LXDelta.m in Sources */ = {isa = PBXBuildFile; fileRef = ABF5054B1B33C4D20077C616 /* LXDelta.m */; };
@@ -50,6 +53,9 @@
 		ABB3D5BB1B20F15400F2A08A /* LXErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXErrors.m; sourceTree = "<group>"; };
 		ABB3D5BE1B20F61100F2A08A /* LXHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXHelpers.h; sourceTree = "<group>"; };
 		ABB3D5BF1B20F61100F2A08A /* LXHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXHelpers.m; sourceTree = "<group>"; };
+		ABE85AF61B35FDF50047EFF1 /* LXScrollViewObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXScrollViewObserver.h; sourceTree = "<group>"; };
+		ABE85AF71B35FDF50047EFF1 /* LXScrollViewObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXScrollViewObserver.m; sourceTree = "<group>"; };
+		ABE85AFA1B35FF310047EFF1 /* LXScrollViewObserverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXScrollViewObserverTests.swift; sourceTree = "<group>"; };
 		ABF505471B33BCC20077C616 /* LXSupportKitTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LXSupportKitTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		ABF505481B33BCC30077C616 /* LXHelpersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXHelpersTests.swift; sourceTree = "<group>"; };
 		ABF5054A1B33C4D20077C616 /* LXDelta.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDelta.h; sourceTree = "<group>"; };
@@ -110,6 +116,8 @@
 				ABB3D5BF1B20F61100F2A08A /* LXHelpers.m */,
 				AB93D2C41B34C45C00CB47E4 /* LXKeyValueObserver.h */,
 				AB93D2C51B34C45C00CB47E4 /* LXKeyValueObserver.m */,
+				ABE85AF61B35FDF50047EFF1 /* LXScrollViewObserver.h */,
+				ABE85AF71B35FDF50047EFF1 /* LXScrollViewObserver.m */,
 				ABB3D59F1B20ECF000F2A08A /* LXSupportKit.h */,
 				ABB3D59D1B20ECF000F2A08A /* Supporting Files */,
 			);
@@ -130,6 +138,7 @@
 				ABF505521B33C59A0077C616 /* LXDeltaCalculatorTests.swift */,
 				ABF505481B33BCC30077C616 /* LXHelpersTests.swift */,
 				AB93D2C81B34CB2000CB47E4 /* LXKeyValueObserverTests.swift */,
+				ABE85AFA1B35FF310047EFF1 /* LXScrollViewObserverTests.swift */,
 				ABB3D5AC1B20ECF000F2A08A /* LXSupportKitTests.m */,
 				ABF505471B33BCC20077C616 /* LXSupportKitTests-Bridging-Header.h */,
 				ABB3D5AA1B20ECF000F2A08A /* Supporting Files */,
@@ -154,6 +163,7 @@
 			files = (
 				ABF505501B33C4D20077C616 /* LXDeltaCalculator.h in Headers */,
 				ABB3D5A01B20ECF000F2A08A /* LXSupportKit.h in Headers */,
+				ABE85AF81B35FDF50047EFF1 /* LXScrollViewObserver.h in Headers */,
 				AB93D2C61B34C45C00CB47E4 /* LXKeyValueObserver.h in Headers */,
 				ABF5054E1B33C4D20077C616 /* LXDelta.h in Headers */,
 				ABB3D5BC1B20F15400F2A08A /* LXErrors.h in Headers */,
@@ -263,6 +273,7 @@
 				ABF505511B33C4D20077C616 /* LXDeltaCalculator.m in Sources */,
 				AB93D2C71B34C45C00CB47E4 /* LXKeyValueObserver.m in Sources */,
 				ABB3D5C11B20F61100F2A08A /* LXHelpers.m in Sources */,
+				ABE85AF91B35FDF50047EFF1 /* LXScrollViewObserver.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -274,6 +285,7 @@
 				ABF505491B33BCC30077C616 /* LXHelpersTests.swift in Sources */,
 				ABB3D5AD1B20ECF000F2A08A /* LXSupportKitTests.m in Sources */,
 				AB93D2C91B34CB2000CB47E4 /* LXKeyValueObserverTests.swift in Sources */,
+				ABE85AFB1B35FF310047EFF1 /* LXScrollViewObserverTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

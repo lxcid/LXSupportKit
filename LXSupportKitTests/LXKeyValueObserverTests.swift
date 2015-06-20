@@ -36,7 +36,6 @@ class LXKeyValueObserverTests: XCTestCase {
         target.hit = true
         
         self.waitForExpectationsWithTimeout(1.0, handler: { error in
-            print((observer, error))
         })
     }
 }
