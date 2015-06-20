@@ -1,11 +1,15 @@
+# http://docs.travis-ci.com/user/languages/objective-c/
 osx_image: beta-xcode6.3
 language: objective-c
+xcode_project: LXSupportKit.xcodeproj
+xcode_scheme: LXSupportKit
+xcode_sdk: iphonesimulator8.1
 
 install:
   - bundle install --without=documentation
-
-script:
-  - xcodebuild test -project LXSupportKit.xcodeproj -scheme LXSupportKit -sdk iphonesimulator
+#
+# script:
+#   - xcodebuild test -project LXSupportKit.xcodeproj -scheme LXSupportKit -sdk iphonesimulator
 
 after_success:
   - bundle exec slather
