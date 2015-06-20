@@ -31,11 +31,12 @@ class LXKeyValueObserverTests: XCTestCase {
         var context: UInt8 = 0
         let target = LXMockTarget()
         let observee = LXMockObservee(expectation: expectation)
-        _ = LXKeyValueObserver(target: target, keyPaths: ["hit"], delegate: observee, action: Selector("action:"), context: &context)
+        let observer = LXKeyValueObserver(target: target, keyPaths: ["hit"], delegate: observee, action: Selector("action:"), context: &context)
         
         target.hit = true
         
         self.waitForExpectationsWithTimeout(1.0, handler: { error in
+            print((observer, error))
         })
     }
 }
