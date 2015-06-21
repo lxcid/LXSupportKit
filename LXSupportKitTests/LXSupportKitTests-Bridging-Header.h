@@ -6,4 +6,5 @@
 #import "LXDeltaCalculator.h"
 #import "LXHelpers.h"
 #import "LXKeyValueObserver.h"
+#import "LXNumberTransformer.h"
 #import "LXScrollViewObserver.h"

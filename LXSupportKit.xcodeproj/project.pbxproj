@@ -17,6 +17,9 @@
 		ABB3D5BD1B20F15400F2A08A /* LXErrors.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D5BB1B20F15400F2A08A /* LXErrors.m */; };
 		ABB3D5C01B20F61100F2A08A /* LXHelpers.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB3D5BE1B20F61100F2A08A /* LXHelpers.h */; };
 		ABB3D5C11B20F61100F2A08A /* LXHelpers.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D5BF1B20F61100F2A08A /* LXHelpers.m */; };
+		ABD40A551B363BC7004168D2 /* LXNumberTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = ABD40A531B363BC7004168D2 /* LXNumberTransformer.h */; };
+		ABD40A561B363BC7004168D2 /* LXNumberTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD40A541B363BC7004168D2 /* LXNumberTransformer.m */; };
+		ABD40A581B36706E004168D2 /* LXNumberTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD40A571B36706E004168D2 /* LXNumberTransformerTests.swift */; };
 		ABE85AF81B35FDF50047EFF1 /* LXScrollViewObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = ABE85AF61B35FDF50047EFF1 /* LXScrollViewObserver.h */; };
 		ABE85AF91B35FDF50047EFF1 /* LXScrollViewObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE85AF71B35FDF50047EFF1 /* LXScrollViewObserver.m */; };
 		ABE85AFB1B35FF310047EFF1 /* LXScrollViewObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE85AFA1B35FF310047EFF1 /* LXScrollViewObserverTests.swift */; };
@@ -53,6 +56,9 @@
 		ABB3D5BB1B20F15400F2A08A /* LXErrors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXErrors.m; sourceTree = "<group>"; };
 		ABB3D5BE1B20F61100F2A08A /* LXHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXHelpers.h; sourceTree = "<group>"; };
 		ABB3D5BF1B20F61100F2A08A /* LXHelpers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXHelpers.m; sourceTree = "<group>"; };
+		ABD40A531B363BC7004168D2 /* LXNumberTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXNumberTransformer.h; sourceTree = "<group>"; };
+		ABD40A541B363BC7004168D2 /* LXNumberTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXNumberTransformer.m; sourceTree = "<group>"; };
+		ABD40A571B36706E004168D2 /* LXNumberTransformerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXNumberTransformerTests.swift; sourceTree = "<group>"; };
 		ABE85AF61B35FDF50047EFF1 /* LXScrollViewObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXScrollViewObserver.h; sourceTree = "<group>"; };
 		ABE85AF71B35FDF50047EFF1 /* LXScrollViewObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXScrollViewObserver.m; sourceTree = "<group>"; };
 		ABE85AFA1B35FF310047EFF1 /* LXScrollViewObserverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXScrollViewObserverTests.swift; sourceTree = "<group>"; };
@@ -119,6 +125,7 @@
 				ABE85AF61B35FDF50047EFF1 /* LXScrollViewObserver.h */,
 				ABE85AF71B35FDF50047EFF1 /* LXScrollViewObserver.m */,
 				ABB3D59F1B20ECF000F2A08A /* LXSupportKit.h */,
+				ABD40A521B363BB3004168D2 /* Value Transformers */,
 				ABB3D59D1B20ECF000F2A08A /* Supporting Files */,
 			);
 			path = LXSupportKit;
@@ -138,6 +145,7 @@
 				ABF505521B33C59A0077C616 /* LXDeltaCalculatorTests.swift */,
 				ABF505481B33BCC30077C616 /* LXHelpersTests.swift */,
 				AB93D2C81B34CB2000CB47E4 /* LXKeyValueObserverTests.swift */,
+				ABD40A571B36706E004168D2 /* LXNumberTransformerTests.swift */,
 				ABE85AFA1B35FF310047EFF1 /* LXScrollViewObserverTests.swift */,
 				ABB3D5AC1B20ECF000F2A08A /* LXSupportKitTests.m */,
 				ABF505471B33BCC20077C616 /* LXSupportKitTests-Bridging-Header.h */,
@@ -154,6 +162,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		ABD40A521B363BB3004168D2 /* Value Transformers */ = {
+			isa = PBXGroup;
+			children = (
+				ABD40A531B363BC7004168D2 /* LXNumberTransformer.h */,
+				ABD40A541B363BC7004168D2 /* LXNumberTransformer.m */,
+			);
+			path = "Value Transformers";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -164,6 +181,7 @@
 				ABF505501B33C4D20077C616 /* LXDeltaCalculator.h in Headers */,
 				ABB3D5A01B20ECF000F2A08A /* LXSupportKit.h in Headers */,
 				ABE85AF81B35FDF50047EFF1 /* LXScrollViewObserver.h in Headers */,
+				ABD40A551B363BC7004168D2 /* LXNumberTransformer.h in Headers */,
 				AB93D2C61B34C45C00CB47E4 /* LXKeyValueObserver.h in Headers */,
 				ABF5054E1B33C4D20077C616 /* LXDelta.h in Headers */,
 				ABB3D5BC1B20F15400F2A08A /* LXErrors.h in Headers */,
@@ -271,6 +289,7 @@
 				ABF5054F1B33C4D20077C616 /* LXDelta.m in Sources */,
 				ABB3D5BD1B20F15400F2A08A /* LXErrors.m in Sources */,
 				ABF505511B33C4D20077C616 /* LXDeltaCalculator.m in Sources */,
+				ABD40A561B363BC7004168D2 /* LXNumberTransformer.m in Sources */,
 				AB93D2C71B34C45C00CB47E4 /* LXKeyValueObserver.m in Sources */,
 				ABB3D5C11B20F61100F2A08A /* LXHelpers.m in Sources */,
 				ABE85AF91B35FDF50047EFF1 /* LXScrollViewObserver.m in Sources */,
@@ -283,6 +302,7 @@
 			files = (
 				ABF505531B33C59A0077C616 /* LXDeltaCalculatorTests.swift in Sources */,
 				ABF505491B33BCC30077C616 /* LXHelpersTests.swift in Sources */,
+				ABD40A581B36706E004168D2 /* LXNumberTransformerTests.swift in Sources */,
 				ABB3D5AD1B20ECF000F2A08A /* LXSupportKitTests.m in Sources */,
 				AB93D2C91B34CB2000CB47E4 /* LXKeyValueObserverTests.swift in Sources */,
 				ABE85AFB1B35FF310047EFF1 /* LXScrollViewObserverTests.swift in Sources */,
