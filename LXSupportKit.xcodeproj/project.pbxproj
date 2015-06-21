@@ -10,6 +10,8 @@
 		AB93D2C61B34C45C00CB47E4 /* LXKeyValueObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = AB93D2C41B34C45C00CB47E4 /* LXKeyValueObserver.h */; };
 		AB93D2C71B34C45C00CB47E4 /* LXKeyValueObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = AB93D2C51B34C45C00CB47E4 /* LXKeyValueObserver.m */; };
 		AB93D2C91B34CB2000CB47E4 /* LXKeyValueObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB93D2C81B34CB2000CB47E4 /* LXKeyValueObserverTests.swift */; };
+		AB999ADD1B368ADB00805D0F /* LXConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = AB999ADB1B368ADB00805D0F /* LXConstants.h */; };
+		AB999ADE1B368ADB00805D0F /* LXConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = AB999ADC1B368ADB00805D0F /* LXConstants.m */; };
 		ABB3D5A01B20ECF000F2A08A /* LXSupportKit.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB3D59F1B20ECF000F2A08A /* LXSupportKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABB3D5A61B20ECF000F2A08A /* LXSupportKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB3D59A1B20ECF000F2A08A /* LXSupportKit.framework */; };
 		ABB3D5AD1B20ECF000F2A08A /* LXSupportKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D5AC1B20ECF000F2A08A /* LXSupportKitTests.m */; };
@@ -45,6 +47,8 @@
 		AB93D2C41B34C45C00CB47E4 /* LXKeyValueObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXKeyValueObserver.h; sourceTree = "<group>"; };
 		AB93D2C51B34C45C00CB47E4 /* LXKeyValueObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXKeyValueObserver.m; sourceTree = "<group>"; };
 		AB93D2C81B34CB2000CB47E4 /* LXKeyValueObserverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXKeyValueObserverTests.swift; sourceTree = "<group>"; };
+		AB999ADB1B368ADB00805D0F /* LXConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXConstants.h; sourceTree = "<group>"; };
+		AB999ADC1B368ADB00805D0F /* LXConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXConstants.m; sourceTree = "<group>"; };
 		ABB3D59A1B20ECF000F2A08A /* LXSupportKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LXSupportKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB3D59E1B20ECF000F2A08A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABB3D59F1B20ECF000F2A08A /* LXSupportKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXSupportKit.h; sourceTree = "<group>"; };
@@ -111,6 +115,8 @@
 		ABB3D59C1B20ECF000F2A08A /* LXSupportKit */ = {
 			isa = PBXGroup;
 			children = (
+				AB999ADB1B368ADB00805D0F /* LXConstants.h */,
+				AB999ADC1B368ADB00805D0F /* LXConstants.m */,
 				ABB3D5B91B20EE9B00F2A08A /* LXDefines.h */,
 				ABF5054A1B33C4D20077C616 /* LXDelta.h */,
 				ABF5054B1B33C4D20077C616 /* LXDelta.m */,
@@ -185,6 +191,7 @@
 				AB93D2C61B34C45C00CB47E4 /* LXKeyValueObserver.h in Headers */,
 				ABF5054E1B33C4D20077C616 /* LXDelta.h in Headers */,
 				ABB3D5BC1B20F15400F2A08A /* LXErrors.h in Headers */,
+				AB999ADD1B368ADB00805D0F /* LXConstants.h in Headers */,
 				ABB3D5C01B20F61100F2A08A /* LXHelpers.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -287,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABF5054F1B33C4D20077C616 /* LXDelta.m in Sources */,
+				AB999ADE1B368ADB00805D0F /* LXConstants.m in Sources */,
 				ABB3D5BD1B20F15400F2A08A /* LXErrors.m in Sources */,
 				ABF505511B33C4D20077C616 /* LXDeltaCalculator.m in Sources */,
 				ABD40A561B363BC7004168D2 /* LXNumberTransformer.m in Sources */,

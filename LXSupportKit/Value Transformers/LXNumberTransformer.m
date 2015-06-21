@@ -8,6 +8,8 @@
 
 #import "LXNumberTransformer.h"
 
+#import "LXConstants.h"
+
 NSString * const LXNumberTransformerName = @"LXNumber";
 
 @implementation LXNumberTransformer
@@ -22,7 +24,7 @@ NSString * const LXNumberTransformerName = @"LXNumber";
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         numberFormatter = [[NSNumberFormatter alloc] init];
-        numberFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"en_US_POSIX"];
+        numberFormatter.locale = [[NSLocale alloc] initWithLocaleIdentifier:kLXDateFormatLocaleEN_US_POSIX];
         numberFormatter.numberStyle = NSNumberFormatterDecimalStyle;
     });
     return numberFormatter;
