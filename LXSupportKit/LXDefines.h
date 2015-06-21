@@ -57,7 +57,7 @@
 #define LXStrongType(x) __strong __typeof(x)
 #define LXWeakType(x) __weak __typeof(x)
 
-/*
+/**
  * Helpers for completions which call the block only if non-nil
  *
  */
@@ -86,3 +86,10 @@ do { \
         LXDispatchExec(dispatch_get_main_queue(), block, __VA_ARGS__); \
     } \
 } while (0)
+
+/**
+ * Common assertions
+ *
+ */
+
+#define LXAssertMainThread() NSAssert([NSThread isMainThread], @"Must be on the main thread at this point")
