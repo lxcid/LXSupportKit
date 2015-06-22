@@ -54,6 +54,12 @@ class LXDateFormattersTests: XCTestCase {
         XCTAssertNil(iso8601DateTransformer.transformedValue(nil))
         XCTAssertNil(iso8601DateTransformer.transformedValue(1))
         
+        if let date = iso8601DateTransformer.transformedValue(date001) {
+            XCTAssertEqual(date, date001)
+        } else {
+            XCTFail()
+        }
+        
         if let date = iso8601DateTransformer.transformedValue("2015-06-22T02:24:18+0800") {
             XCTAssertEqual(date, date001)
         } else {
@@ -139,6 +145,15 @@ class LXDateFormattersTests: XCTestCase {
         NSTimeZone.setDefaultTimeZone(self.newYorkTimeZone)
         if let string = iso8601DateTransformer.reverseTransformedValue(date001) {
             XCTAssertEqual(string, "2015-06-21T14:24:18-0400")
+        } else {
+            XCTFail()
+        }
+    }
+    
+    func testTransformedValueClass() {
+        let expectedClass: AnyClass = LXISO8601DateTransformer.transformedValueClass()
+        if let result = LXISO8601DateTransformer.sharedTransformer().transformedValue("2015-06-22T02:24:18+0800") {
+            XCTAssertTrue(result.isKindOfClass(expectedClass))
         } else {
             XCTFail()
         }
