@@ -78,12 +78,31 @@ do { \
     } \
 } while (0)
 
+#define LXDispatchExecSync(queue, block, ...) \
+do { \
+    if (block) { \
+        dispatch_sync(queue, ^{ \
+            block(__VA_ARGS__); \
+        }); \
+    } \
+} while (0)
+
 #define LXBlockExecOnMainThread(block, ...) \
 do { \
     if ([NSThread isMainThread]) { \
         LXBlockExec(block, __VA_ARGS__); \
     } else { \
         LXDispatchExec(dispatch_get_main_queue(), block, __VA_ARGS__); \
+    } \
+} while (0)
+
+// Beware of thread explosion causing deadlock… Use with care…
+#define LXBlockExecSyncOnMainThread(block, ...) \
+do { \
+    if ([NSThread isMainThread]) { \
+        LXBlockExec(block, __VA_ARGS__); \
+    } else { \
+        LXDispatchExecSync(dispatch_get_main_queue(), block, __VA_ARGS__); \
     } \
 } while (0)
 
