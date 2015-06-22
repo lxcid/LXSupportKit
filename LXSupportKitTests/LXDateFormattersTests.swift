@@ -66,6 +66,8 @@ class LXDateFormattersTests: XCTestCase {
             XCTFail()
         }
         
+        XCTAssertTrue(LXISO8601DateTransformer.allowsReverseTransformation())
+        
         XCTAssertNil(iso8601DateTransformer.reverseTransformedValue(nil))
         XCTAssertNil(iso8601DateTransformer.reverseTransformedValue(1))
         
@@ -113,6 +115,8 @@ class LXDateFormattersTests: XCTestCase {
                 XCTFail()
             }
             
+            XCTAssertTrue(LXISO8601DateTransformer.allowsReverseTransformation())
+            
             XCTAssertNil(iso8601DateTransformer.reverseTransformedValue(nil))
             XCTAssertNil(iso8601DateTransformer.reverseTransformedValue(1))
             
@@ -138,6 +142,8 @@ class LXDateFormattersTests: XCTestCase {
         } else {
             XCTFail()
         }
+        
+        XCTAssertTrue(LXISO8601DateTransformer.allowsReverseTransformation())
         
         XCTAssertNil(iso8601DateTransformer.reverseTransformedValue(nil))
         XCTAssertNil(iso8601DateTransformer.reverseTransformedValue(1))
