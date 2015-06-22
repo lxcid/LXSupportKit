@@ -41,7 +41,8 @@ NSString * const LXBooleanTransformerName = @"LXBoolean";
         return nil;
     }
     if ([value isKindOfClass:[NSNumber class]]) {
-        return value;
+        NSNumber *number = (NSNumber *)value;
+        return [NSNumber numberWithBool:number.boolValue];
     } else if ([value isKindOfClass:[NSString class]]) {
         NSString *string = (NSString *)value;
         if ([string compare:@"true" options:NSCaseInsensitiveSearch] == NSOrderedSame) {
@@ -50,7 +51,11 @@ NSString * const LXBooleanTransformerName = @"LXBoolean";
             return @NO;
         } else {
             LXNumberTransformer *numberTransformer = [LXNumberTransformer sharedTransformer];
-            return [numberTransformer transformedValue:string];
+            NSNumber *number = [numberTransformer transformedValue:string];
+            if (!number) {
+                return nil;
+            }
+            return [NSNumber numberWithBool:number.boolValue];
         }
     } else {
         return nil;

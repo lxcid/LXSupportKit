@@ -16,10 +16,17 @@ class LXBooleanTransformerTests: XCTestCase {
         XCTAssertNil(booleanTransformer.transformedValue(NSDate()))
         XCTAssertEqual(booleanTransformer.transformedValue("true")!, true)
         XCTAssertEqual(booleanTransformer.transformedValue("false")!, false)
+        XCTAssertEqual(booleanTransformer.transformedValue("1")!, true)
+        XCTAssertEqual(booleanTransformer.transformedValue("0")!, false)
+        XCTAssertEqual(booleanTransformer.transformedValue("999")!, true)
+        XCTAssertEqual(booleanTransformer.transformedValue("-999")!, true)
+        XCTAssertNil(booleanTransformer.transformedValue("a"))
         XCTAssertEqual(booleanTransformer.transformedValue(true)!, true)
         XCTAssertEqual(booleanTransformer.transformedValue(false)!, false)
         XCTAssertEqual(booleanTransformer.transformedValue(1)!, true)
         XCTAssertEqual(booleanTransformer.transformedValue(0)!, false)
+        XCTAssertEqual(booleanTransformer.transformedValue(999)!, true)
+        XCTAssertEqual(booleanTransformer.transformedValue(-999)!, true)
         
         XCTAssertFalse(LXBooleanTransformer.allowsReverseTransformation())
         
@@ -32,10 +39,17 @@ class LXBooleanTransformerTests: XCTestCase {
             XCTAssertNil(booleanTransformer.transformedValue(NSDate()))
             XCTAssertEqual(booleanTransformer.transformedValue("true")!, true)
             XCTAssertEqual(booleanTransformer.transformedValue("false")!, false)
+            XCTAssertEqual(booleanTransformer.transformedValue("1")!, true)
+            XCTAssertEqual(booleanTransformer.transformedValue("0")!, false)
+            XCTAssertEqual(booleanTransformer.transformedValue("999")!, true)
+            XCTAssertEqual(booleanTransformer.transformedValue("-999")!, true)
+            XCTAssertNil(booleanTransformer.transformedValue("a"))
             XCTAssertEqual(booleanTransformer.transformedValue(true)!, true)
             XCTAssertEqual(booleanTransformer.transformedValue(false)!, false)
             XCTAssertEqual(booleanTransformer.transformedValue(1)!, true)
             XCTAssertEqual(booleanTransformer.transformedValue(0)!, false)
+            XCTAssertEqual(booleanTransformer.transformedValue(999)!, true)
+            XCTAssertEqual(booleanTransformer.transformedValue(-999)!, true)
             
             XCTAssertFalse(LXBooleanTransformer.allowsReverseTransformation())
             
@@ -52,10 +66,17 @@ class LXBooleanTransformerTests: XCTestCase {
         XCTAssertNil(booleanTransformer.transformedValue(NSDate()))
         XCTAssertEqual(booleanTransformer.transformedValue("true")!, true)
         XCTAssertEqual(booleanTransformer.transformedValue("false")!, false)
+        XCTAssertEqual(booleanTransformer.transformedValue("1")!, true)
+        XCTAssertEqual(booleanTransformer.transformedValue("0")!, false)
+        XCTAssertEqual(booleanTransformer.transformedValue("999")!, true)
+        XCTAssertEqual(booleanTransformer.transformedValue("-999")!, true)
+        XCTAssertNil(booleanTransformer.transformedValue("a"))
         XCTAssertEqual(booleanTransformer.transformedValue(true)!, true)
         XCTAssertEqual(booleanTransformer.transformedValue(false)!, false)
         XCTAssertEqual(booleanTransformer.transformedValue(1)!, true)
         XCTAssertEqual(booleanTransformer.transformedValue(0)!, false)
+        XCTAssertEqual(booleanTransformer.transformedValue(999)!, true)
+        XCTAssertEqual(booleanTransformer.transformedValue(-999)!, true)
         
         XCTAssertFalse(LXBooleanTransformer.allowsReverseTransformation())
         
@@ -63,7 +84,7 @@ class LXBooleanTransformerTests: XCTestCase {
     }
     
     func testTransformedValueClass() {
-        let expectedClass: AnyClass = LXNumberTransformer.transformedValueClass()
+        let expectedClass: AnyClass = LXBooleanTransformer.transformedValueClass()
         if let result = LXBooleanTransformer.sharedTransformer().transformedValue("true") {
             XCTAssertTrue(result.isKindOfClass(expectedClass))
         } else {
