@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB3DEB9B1B38943D0000B866 /* LXBooleanTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = AB3DEB991B38943D0000B866 /* LXBooleanTransformer.h */; };
+		AB3DEB9C1B38943D0000B866 /* LXBooleanTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3DEB9A1B38943D0000B866 /* LXBooleanTransformer.m */; };
+		AB3DEB9E1B389AC70000B866 /* LXBooleanTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3DEB9D1B389AC70000B866 /* LXBooleanTransformerTests.swift */; };
 		AB93D2C61B34C45C00CB47E4 /* LXKeyValueObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = AB93D2C41B34C45C00CB47E4 /* LXKeyValueObserver.h */; };
 		AB93D2C71B34C45C00CB47E4 /* LXKeyValueObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = AB93D2C51B34C45C00CB47E4 /* LXKeyValueObserver.m */; };
 		AB93D2C91B34CB2000CB47E4 /* LXKeyValueObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB93D2C81B34CB2000CB47E4 /* LXKeyValueObserverTests.swift */; };
@@ -50,6 +53,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB3DEB991B38943D0000B866 /* LXBooleanTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXBooleanTransformer.h; sourceTree = "<group>"; };
+		AB3DEB9A1B38943D0000B866 /* LXBooleanTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXBooleanTransformer.m; sourceTree = "<group>"; };
+		AB3DEB9D1B389AC70000B866 /* LXBooleanTransformerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXBooleanTransformerTests.swift; sourceTree = "<group>"; };
 		AB93D2C41B34C45C00CB47E4 /* LXKeyValueObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXKeyValueObserver.h; sourceTree = "<group>"; };
 		AB93D2C51B34C45C00CB47E4 /* LXKeyValueObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXKeyValueObserver.m; sourceTree = "<group>"; };
 		AB93D2C81B34CB2000CB47E4 /* LXKeyValueObserverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXKeyValueObserverTests.swift; sourceTree = "<group>"; };
@@ -162,6 +168,7 @@
 		ABB3D5A91B20ECF000F2A08A /* LXSupportKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				AB3DEB9D1B389AC70000B866 /* LXBooleanTransformerTests.swift */,
 				AB98C4451B37B96E00FAFF6D /* LXDateTransformersTests.swift */,
 				ABF505521B33C59A0077C616 /* LXDeltaCalculatorTests.swift */,
 				AB999AE31B373FE600805D0F /* LXDictionaryBuilderTests.swift */,
@@ -187,6 +194,8 @@
 		ABD40A521B363BB3004168D2 /* Value Transformers */ = {
 			isa = PBXGroup;
 			children = (
+				AB3DEB991B38943D0000B866 /* LXBooleanTransformer.h */,
+				AB3DEB9A1B38943D0000B866 /* LXBooleanTransformer.m */,
 				AB98C4411B37B44D00FAFF6D /* LXDateTransformers.h */,
 				AB98C4421B37B44D00FAFF6D /* LXDateTransformers.m */,
 				ABD40A531B363BC7004168D2 /* LXNumberTransformer.h */,
@@ -205,6 +214,7 @@
 				ABF505501B33C4D20077C616 /* LXDeltaCalculator.h in Headers */,
 				ABB3D5A01B20ECF000F2A08A /* LXSupportKit.h in Headers */,
 				ABE85AF81B35FDF50047EFF1 /* LXScrollViewObserver.h in Headers */,
+				AB3DEB9B1B38943D0000B866 /* LXBooleanTransformer.h in Headers */,
 				ABD40A551B363BC7004168D2 /* LXNumberTransformer.h in Headers */,
 				AB93D2C61B34C45C00CB47E4 /* LXKeyValueObserver.h in Headers */,
 				ABF5054E1B33C4D20077C616 /* LXDelta.h in Headers */,
@@ -318,6 +328,7 @@
 				ABB3D5BD1B20F15400F2A08A /* LXErrors.m in Sources */,
 				AB999AE21B373A4500805D0F /* LXDictionaryBuilder.m in Sources */,
 				ABF505511B33C4D20077C616 /* LXDeltaCalculator.m in Sources */,
+				AB3DEB9C1B38943D0000B866 /* LXBooleanTransformer.m in Sources */,
 				ABD40A561B363BC7004168D2 /* LXNumberTransformer.m in Sources */,
 				AB93D2C71B34C45C00CB47E4 /* LXKeyValueObserver.m in Sources */,
 				AB98C4441B37B44D00FAFF6D /* LXDateTransformers.m in Sources */,
@@ -330,6 +341,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AB3DEB9E1B389AC70000B866 /* LXBooleanTransformerTests.swift in Sources */,
 				ABF505531B33C59A0077C616 /* LXDeltaCalculatorTests.swift in Sources */,
 				AB999AE41B373FE600805D0F /* LXDictionaryBuilderTests.swift in Sources */,
 				ABF505491B33BCC30077C616 /* LXHelpersTests.swift in Sources */,
