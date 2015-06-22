@@ -1,5 +1,5 @@
 //
-//  LXDateFormattersTests.swift
+//  LXDateTransformersTests.swift
 //  LXSupportKit
 //
 //  Created by Stan Chang Khin Boon on 21/6/15.
@@ -8,7 +8,7 @@
 
 import XCTest
 
-class LXDateFormattersTests: XCTestCase {
+class LXISO8601DateTransformerTests: XCTestCase {
     let localTimeZone = NSTimeZone.localTimeZone()
     
     let newYorkTimeZone = NSTimeZone(forSecondsFromGMT: -4 * 60 * 60)
@@ -48,7 +48,7 @@ class LXDateFormattersTests: XCTestCase {
         XCTAssertNotEqual(localTimeZone, copiedLocalTimeZone)
     }
     
-    func testISO8601DateNew() {
+    func testNew() {
         let iso8601DateTransformer = LXISO8601DateTransformer()
         
         XCTAssertNil(iso8601DateTransformer.transformedValue(nil))
@@ -93,7 +93,7 @@ class LXDateFormattersTests: XCTestCase {
         }
     }
     
-    func testISO8601DateNewWithTimeZone() {
+    func testNewWithTimeZone() {
         let iso8601DateTransformer = LXISO8601DateTransformer(timeZone: self.singaporeTimeZone)
         
         NSTimeZone.setDefaultTimeZone(self.londonTimeZone)
@@ -104,7 +104,7 @@ class LXDateFormattersTests: XCTestCase {
         }
     }
     
-    func testISO8601DateForName() {
+    func testForName() {
         if let iso8601DateTransformer = NSValueTransformer(forName: LXISO8601DateTransformerName) as? LXISO8601DateTransformer {
             XCTAssertNil(iso8601DateTransformer.transformedValue(nil))
             XCTAssertNil(iso8601DateTransformer.transformedValue(1))
@@ -131,7 +131,7 @@ class LXDateFormattersTests: XCTestCase {
         }
     }
     
-    func testISO8601DateSharedTransformer() {
+    func testSharedTransformer() {
         let iso8601DateTransformer = LXISO8601DateTransformer.sharedTransformer()
         
         XCTAssertNil(iso8601DateTransformer.transformedValue(nil))
@@ -165,7 +165,7 @@ class LXDateFormattersTests: XCTestCase {
         }
     }
     
-    func testISO8601DateVariations() {
+    func testVariations() {
         let iso8601DateTransformer = LXISO8601DateTransformer.sharedTransformer()
         
         if let date = iso8601DateTransformer.transformedValue("2015-06-22T02:24:18+0800") {

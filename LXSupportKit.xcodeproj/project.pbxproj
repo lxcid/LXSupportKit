@@ -12,7 +12,7 @@
 		AB93D2C91B34CB2000CB47E4 /* LXKeyValueObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB93D2C81B34CB2000CB47E4 /* LXKeyValueObserverTests.swift */; };
 		AB98C4431B37B44D00FAFF6D /* LXDateTransformers.h in Headers */ = {isa = PBXBuildFile; fileRef = AB98C4411B37B44D00FAFF6D /* LXDateTransformers.h */; };
 		AB98C4441B37B44D00FAFF6D /* LXDateTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = AB98C4421B37B44D00FAFF6D /* LXDateTransformers.m */; };
-		AB98C4461B37B96E00FAFF6D /* LXDateFormattersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98C4451B37B96E00FAFF6D /* LXDateFormattersTests.swift */; };
+		AB98C4461B37B96E00FAFF6D /* LXDateTransformersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98C4451B37B96E00FAFF6D /* LXDateTransformersTests.swift */; };
 		AB999ADD1B368ADB00805D0F /* LXConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = AB999ADB1B368ADB00805D0F /* LXConstants.h */; };
 		AB999ADE1B368ADB00805D0F /* LXConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = AB999ADC1B368ADB00805D0F /* LXConstants.m */; };
 		AB999AE11B373A4500805D0F /* LXDictionaryBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = AB999ADF1B373A4500805D0F /* LXDictionaryBuilder.h */; };
@@ -55,7 +55,7 @@
 		AB93D2C81B34CB2000CB47E4 /* LXKeyValueObserverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXKeyValueObserverTests.swift; sourceTree = "<group>"; };
 		AB98C4411B37B44D00FAFF6D /* LXDateTransformers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDateTransformers.h; sourceTree = "<group>"; };
 		AB98C4421B37B44D00FAFF6D /* LXDateTransformers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDateTransformers.m; sourceTree = "<group>"; };
-		AB98C4451B37B96E00FAFF6D /* LXDateFormattersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXDateFormattersTests.swift; sourceTree = "<group>"; };
+		AB98C4451B37B96E00FAFF6D /* LXDateTransformersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXDateTransformersTests.swift; sourceTree = "<group>"; };
 		AB999ADB1B368ADB00805D0F /* LXConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXConstants.h; sourceTree = "<group>"; };
 		AB999ADC1B368ADB00805D0F /* LXConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXConstants.m; sourceTree = "<group>"; };
 		AB999ADF1B373A4500805D0F /* LXDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDictionaryBuilder.h; sourceTree = "<group>"; };
@@ -162,7 +162,7 @@
 		ABB3D5A91B20ECF000F2A08A /* LXSupportKitTests */ = {
 			isa = PBXGroup;
 			children = (
-				AB98C4451B37B96E00FAFF6D /* LXDateFormattersTests.swift */,
+				AB98C4451B37B96E00FAFF6D /* LXDateTransformersTests.swift */,
 				ABF505521B33C59A0077C616 /* LXDeltaCalculatorTests.swift */,
 				AB999AE31B373FE600805D0F /* LXDictionaryBuilderTests.swift */,
 				ABF505481B33BCC30077C616 /* LXHelpersTests.swift */,
@@ -336,7 +336,7 @@
 				ABD40A581B36706E004168D2 /* LXNumberTransformerTests.swift in Sources */,
 				ABB3D5AD1B20ECF000F2A08A /* LXSupportKitTests.m in Sources */,
 				AB93D2C91B34CB2000CB47E4 /* LXKeyValueObserverTests.swift in Sources */,
-				AB98C4461B37B96E00FAFF6D /* LXDateFormattersTests.swift in Sources */,
+				AB98C4461B37B96E00FAFF6D /* LXDateTransformersTests.swift in Sources */,
 				ABE85AFB1B35FF310047EFF1 /* LXScrollViewObserverTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -391,7 +391,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -434,7 +434,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
