@@ -9,7 +9,7 @@
 import XCTest
 
 class LXNumberTransformerTests: XCTestCase {
-    func testInstance() {
+    func testNew() {
         let numberTransformer = LXNumberTransformer()
         
         XCTAssertNil(numberTransformer.transformedValue(nil))

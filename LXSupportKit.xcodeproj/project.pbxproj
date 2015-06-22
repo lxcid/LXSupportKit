@@ -10,6 +10,9 @@
 		AB93D2C61B34C45C00CB47E4 /* LXKeyValueObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = AB93D2C41B34C45C00CB47E4 /* LXKeyValueObserver.h */; };
 		AB93D2C71B34C45C00CB47E4 /* LXKeyValueObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = AB93D2C51B34C45C00CB47E4 /* LXKeyValueObserver.m */; };
 		AB93D2C91B34CB2000CB47E4 /* LXKeyValueObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB93D2C81B34CB2000CB47E4 /* LXKeyValueObserverTests.swift */; };
+		AB98C4431B37B44D00FAFF6D /* LXDateTransformers.h in Headers */ = {isa = PBXBuildFile; fileRef = AB98C4411B37B44D00FAFF6D /* LXDateTransformers.h */; };
+		AB98C4441B37B44D00FAFF6D /* LXDateTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = AB98C4421B37B44D00FAFF6D /* LXDateTransformers.m */; };
+		AB98C4461B37B96E00FAFF6D /* LXDateFormattersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB98C4451B37B96E00FAFF6D /* LXDateFormattersTests.swift */; };
 		AB999ADD1B368ADB00805D0F /* LXConstants.h in Headers */ = {isa = PBXBuildFile; fileRef = AB999ADB1B368ADB00805D0F /* LXConstants.h */; };
 		AB999ADE1B368ADB00805D0F /* LXConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = AB999ADC1B368ADB00805D0F /* LXConstants.m */; };
 		AB999AE11B373A4500805D0F /* LXDictionaryBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = AB999ADF1B373A4500805D0F /* LXDictionaryBuilder.h */; };
@@ -50,6 +53,9 @@
 		AB93D2C41B34C45C00CB47E4 /* LXKeyValueObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXKeyValueObserver.h; sourceTree = "<group>"; };
 		AB93D2C51B34C45C00CB47E4 /* LXKeyValueObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXKeyValueObserver.m; sourceTree = "<group>"; };
 		AB93D2C81B34CB2000CB47E4 /* LXKeyValueObserverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXKeyValueObserverTests.swift; sourceTree = "<group>"; };
+		AB98C4411B37B44D00FAFF6D /* LXDateTransformers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDateTransformers.h; sourceTree = "<group>"; };
+		AB98C4421B37B44D00FAFF6D /* LXDateTransformers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDateTransformers.m; sourceTree = "<group>"; };
+		AB98C4451B37B96E00FAFF6D /* LXDateFormattersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXDateFormattersTests.swift; sourceTree = "<group>"; };
 		AB999ADB1B368ADB00805D0F /* LXConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXConstants.h; sourceTree = "<group>"; };
 		AB999ADC1B368ADB00805D0F /* LXConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXConstants.m; sourceTree = "<group>"; };
 		AB999ADF1B373A4500805D0F /* LXDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDictionaryBuilder.h; sourceTree = "<group>"; };
@@ -156,6 +162,7 @@
 		ABB3D5A91B20ECF000F2A08A /* LXSupportKitTests */ = {
 			isa = PBXGroup;
 			children = (
+				AB98C4451B37B96E00FAFF6D /* LXDateFormattersTests.swift */,
 				ABF505521B33C59A0077C616 /* LXDeltaCalculatorTests.swift */,
 				AB999AE31B373FE600805D0F /* LXDictionaryBuilderTests.swift */,
 				ABF505481B33BCC30077C616 /* LXHelpersTests.swift */,
@@ -180,6 +187,8 @@
 		ABD40A521B363BB3004168D2 /* Value Transformers */ = {
 			isa = PBXGroup;
 			children = (
+				AB98C4411B37B44D00FAFF6D /* LXDateTransformers.h */,
+				AB98C4421B37B44D00FAFF6D /* LXDateTransformers.m */,
 				ABD40A531B363BC7004168D2 /* LXNumberTransformer.h */,
 				ABD40A541B363BC7004168D2 /* LXNumberTransformer.m */,
 			);
@@ -203,6 +212,7 @@
 				AB999ADD1B368ADB00805D0F /* LXConstants.h in Headers */,
 				AB999AE11B373A4500805D0F /* LXDictionaryBuilder.h in Headers */,
 				ABB3D5C01B20F61100F2A08A /* LXHelpers.h in Headers */,
+				AB98C4431B37B44D00FAFF6D /* LXDateTransformers.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,6 +320,7 @@
 				ABF505511B33C4D20077C616 /* LXDeltaCalculator.m in Sources */,
 				ABD40A561B363BC7004168D2 /* LXNumberTransformer.m in Sources */,
 				AB93D2C71B34C45C00CB47E4 /* LXKeyValueObserver.m in Sources */,
+				AB98C4441B37B44D00FAFF6D /* LXDateTransformers.m in Sources */,
 				ABB3D5C11B20F61100F2A08A /* LXHelpers.m in Sources */,
 				ABE85AF91B35FDF50047EFF1 /* LXScrollViewObserver.m in Sources */,
 			);
@@ -325,6 +336,7 @@
 				ABD40A581B36706E004168D2 /* LXNumberTransformerTests.swift in Sources */,
 				ABB3D5AD1B20ECF000F2A08A /* LXSupportKitTests.m in Sources */,
 				AB93D2C91B34CB2000CB47E4 /* LXKeyValueObserverTests.swift in Sources */,
+				AB98C4461B37B96E00FAFF6D /* LXDateFormattersTests.swift in Sources */,
 				ABE85AFB1B35FF310047EFF1 /* LXScrollViewObserverTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
