@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AB0EAAAC1B3B475B00E1D165 /* NSURLComponents+LXSupportKitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB0EAAAB1B3B475B00E1D165 /* NSURLComponents+LXSupportKitTests.swift */; };
 		AB3DEB9B1B38943D0000B866 /* LXBooleanTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = AB3DEB991B38943D0000B866 /* LXBooleanTransformer.h */; };
 		AB3DEB9C1B38943D0000B866 /* LXBooleanTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3DEB9A1B38943D0000B866 /* LXBooleanTransformer.m */; };
 		AB3DEB9E1B389AC70000B866 /* LXBooleanTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3DEB9D1B389AC70000B866 /* LXBooleanTransformerTests.swift */; };
@@ -31,6 +32,10 @@
 		ABD40A551B363BC7004168D2 /* LXNumberTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = ABD40A531B363BC7004168D2 /* LXNumberTransformer.h */; };
 		ABD40A561B363BC7004168D2 /* LXNumberTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = ABD40A541B363BC7004168D2 /* LXNumberTransformer.m */; };
 		ABD40A581B36706E004168D2 /* LXNumberTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABD40A571B36706E004168D2 /* LXNumberTransformerTests.swift */; };
+		ABE363101B3AEFEC00D15A68 /* NSURLComponents+LXSupportKit.h in Headers */ = {isa = PBXBuildFile; fileRef = ABE3630E1B3AEFEC00D15A68 /* NSURLComponents+LXSupportKit.h */; };
+		ABE363111B3AEFEC00D15A68 /* NSURLComponents+LXSupportKit.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE3630F1B3AEFEC00D15A68 /* NSURLComponents+LXSupportKit.m */; };
+		ABE363141B3B023A00D15A68 /* LXURLQueryItem.h in Headers */ = {isa = PBXBuildFile; fileRef = ABE363121B3B023A00D15A68 /* LXURLQueryItem.h */; };
+		ABE363151B3B023A00D15A68 /* LXURLQueryItem.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE363131B3B023A00D15A68 /* LXURLQueryItem.m */; };
 		ABE85AF81B35FDF50047EFF1 /* LXScrollViewObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = ABE85AF61B35FDF50047EFF1 /* LXScrollViewObserver.h */; };
 		ABE85AF91B35FDF50047EFF1 /* LXScrollViewObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = ABE85AF71B35FDF50047EFF1 /* LXScrollViewObserver.m */; };
 		ABE85AFB1B35FF310047EFF1 /* LXScrollViewObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ABE85AFA1B35FF310047EFF1 /* LXScrollViewObserverTests.swift */; };
@@ -53,6 +58,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AB0EAAAB1B3B475B00E1D165 /* NSURLComponents+LXSupportKitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "NSURLComponents+LXSupportKitTests.swift"; sourceTree = "<group>"; };
 		AB3DEB991B38943D0000B866 /* LXBooleanTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXBooleanTransformer.h; sourceTree = "<group>"; };
 		AB3DEB9A1B38943D0000B866 /* LXBooleanTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXBooleanTransformer.m; sourceTree = "<group>"; };
 		AB3DEB9D1B389AC70000B866 /* LXBooleanTransformerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXBooleanTransformerTests.swift; sourceTree = "<group>"; };
@@ -81,6 +87,10 @@
 		ABD40A531B363BC7004168D2 /* LXNumberTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXNumberTransformer.h; sourceTree = "<group>"; };
 		ABD40A541B363BC7004168D2 /* LXNumberTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXNumberTransformer.m; sourceTree = "<group>"; };
 		ABD40A571B36706E004168D2 /* LXNumberTransformerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXNumberTransformerTests.swift; sourceTree = "<group>"; };
+		ABE3630E1B3AEFEC00D15A68 /* NSURLComponents+LXSupportKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSURLComponents+LXSupportKit.h"; sourceTree = "<group>"; };
+		ABE3630F1B3AEFEC00D15A68 /* NSURLComponents+LXSupportKit.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSURLComponents+LXSupportKit.m"; sourceTree = "<group>"; };
+		ABE363121B3B023A00D15A68 /* LXURLQueryItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXURLQueryItem.h; sourceTree = "<group>"; };
+		ABE363131B3B023A00D15A68 /* LXURLQueryItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXURLQueryItem.m; sourceTree = "<group>"; };
 		ABE85AF61B35FDF50047EFF1 /* LXScrollViewObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXScrollViewObserver.h; sourceTree = "<group>"; };
 		ABE85AF71B35FDF50047EFF1 /* LXScrollViewObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXScrollViewObserver.m; sourceTree = "<group>"; };
 		ABE85AFA1B35FF310047EFF1 /* LXScrollViewObserverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXScrollViewObserverTests.swift; sourceTree = "<group>"; };
@@ -151,6 +161,10 @@
 				ABE85AF61B35FDF50047EFF1 /* LXScrollViewObserver.h */,
 				ABE85AF71B35FDF50047EFF1 /* LXScrollViewObserver.m */,
 				ABB3D59F1B20ECF000F2A08A /* LXSupportKit.h */,
+				ABE3630E1B3AEFEC00D15A68 /* NSURLComponents+LXSupportKit.h */,
+				ABE3630F1B3AEFEC00D15A68 /* NSURLComponents+LXSupportKit.m */,
+				ABE363121B3B023A00D15A68 /* LXURLQueryItem.h */,
+				ABE363131B3B023A00D15A68 /* LXURLQueryItem.m */,
 				ABD40A521B363BB3004168D2 /* Value Transformers */,
 				ABB3D59D1B20ECF000F2A08A /* Supporting Files */,
 			);
@@ -178,6 +192,7 @@
 				ABE85AFA1B35FF310047EFF1 /* LXScrollViewObserverTests.swift */,
 				ABB3D5AC1B20ECF000F2A08A /* LXSupportKitTests.m */,
 				ABF505471B33BCC20077C616 /* LXSupportKitTests-Bridging-Header.h */,
+				AB0EAAAB1B3B475B00E1D165 /* NSURLComponents+LXSupportKitTests.swift */,
 				ABB3D5AA1B20ECF000F2A08A /* Supporting Files */,
 			);
 			path = LXSupportKitTests;
@@ -219,10 +234,12 @@
 				AB93D2C61B34C45C00CB47E4 /* LXKeyValueObserver.h in Headers */,
 				ABF5054E1B33C4D20077C616 /* LXDelta.h in Headers */,
 				ABB3D5BC1B20F15400F2A08A /* LXErrors.h in Headers */,
+				ABE363141B3B023A00D15A68 /* LXURLQueryItem.h in Headers */,
 				AB999ADD1B368ADB00805D0F /* LXConstants.h in Headers */,
 				AB999AE11B373A4500805D0F /* LXDictionaryBuilder.h in Headers */,
 				ABB3D5C01B20F61100F2A08A /* LXHelpers.h in Headers */,
 				AB98C4431B37B44D00FAFF6D /* LXDateTransformers.h in Headers */,
+				ABE363101B3AEFEC00D15A68 /* NSURLComponents+LXSupportKit.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +349,8 @@
 				ABD40A561B363BC7004168D2 /* LXNumberTransformer.m in Sources */,
 				AB93D2C71B34C45C00CB47E4 /* LXKeyValueObserver.m in Sources */,
 				AB98C4441B37B44D00FAFF6D /* LXDateTransformers.m in Sources */,
+				ABE363111B3AEFEC00D15A68 /* NSURLComponents+LXSupportKit.m in Sources */,
+				ABE363151B3B023A00D15A68 /* LXURLQueryItem.m in Sources */,
 				ABB3D5C11B20F61100F2A08A /* LXHelpers.m in Sources */,
 				ABE85AF91B35FDF50047EFF1 /* LXScrollViewObserver.m in Sources */,
 			);
@@ -342,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AB3DEB9E1B389AC70000B866 /* LXBooleanTransformerTests.swift in Sources */,
+				AB0EAAAC1B3B475B00E1D165 /* NSURLComponents+LXSupportKitTests.swift in Sources */,
 				ABF505531B33C59A0077C616 /* LXDeltaCalculatorTests.swift in Sources */,
 				AB999AE41B373FE600805D0F /* LXDictionaryBuilderTests.swift in Sources */,
 				ABF505491B33BCC30077C616 /* LXHelpersTests.swift in Sources */,
