@@ -33,7 +33,7 @@ class LXURLQueryItemTests: XCTestCase {
     
     func testCopying() {
         let queryItem1 = LXURLQueryItem()
-        let queryItem2 = queryItem1.copy()
+        let queryItem2 = queryItem1.copy() as! LXURLQueryItem
         XCTAssertTrue(queryItem1 === queryItem2)
     }
     
@@ -47,17 +47,14 @@ class LXURLQueryItemTests: XCTestCase {
         let data = NSMutableData()
         
         let keyedArchiver = NSKeyedArchiver(forWritingWithMutableData: data)
-        keyedArchiver.requiresSecureCoding = true
+        keyedArchiver.setRequiresSecureCoding(true)
         queryItem1.encodeWithCoder(keyedArchiver)
         keyedArchiver.finishEncoding()
         
         let keyedUnarchiver = NSKeyedUnarchiver(forReadingWithData: data)
-        keyedUnarchiver.requiresSecureCoding = true
-        if let queryItem2 = LXURLQueryItem(coder: keyedUnarchiver) {
-            XCTAssertEqual(queryItem1, queryItem2)
-        } else {
-            XCTFail()
-        }
+        keyedUnarchiver.setRequiresSecureCoding(true)
+        let queryItem2 = LXURLQueryItem(coder: keyedUnarchiver)
+        XCTAssertEqual(queryItem1, queryItem2)
         keyedUnarchiver.finishDecoding()
     }
 }
