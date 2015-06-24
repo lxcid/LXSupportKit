@@ -8,6 +8,60 @@
 
 import XCTest
 
+class LXURLQueryItemTests: XCTestCase {
+    func testHashAndEquality() {
+        let queryItem1 = LXURLQueryItem()
+        XCTAssertEqual(queryItem1, queryItem1)
+        XCTAssertFalse(queryItem1.isEqual(NSURL()))
+        XCTAssertEqual(queryItem1, LXURLQueryItem())
+        
+        let queryItem2 = LXURLQueryItem(name: "hello", value: "world")
+        XCTAssertNotEqual(queryItem1, queryItem2)
+        XCTAssertEqual(queryItem2, LXURLQueryItem(name: "hello", value: "world"))
+        
+        var queryItems = Set<LXURLQueryItem>()
+        XCTAssertEqual(queryItems.count, 0)
+        queryItems.insert(queryItem1)
+        XCTAssertEqual(queryItems.count, 1)
+        queryItems.insert(queryItem2)
+        XCTAssertEqual(queryItems.count, 2)
+        queryItems.insert(LXURLQueryItem())
+        XCTAssertEqual(queryItems.count, 2)
+        queryItems.insert(LXURLQueryItem(name: "hello", value: "world"))
+        XCTAssertEqual(queryItems.count, 2)
+    }
+    
+    func testCopying() {
+        let queryItem1 = LXURLQueryItem()
+        let queryItem2 = queryItem1.copy()
+        XCTAssertTrue(queryItem1 === queryItem2)
+    }
+    
+    func testDescription() {
+        XCTAssertNotNil(LXURLQueryItem().description)
+    }
+    
+    func testCoding() {
+        let queryItem1 = LXURLQueryItem(name: "hello", value: "world")
+        
+        let data = NSMutableData()
+        
+        let keyedArchiver = NSKeyedArchiver(forWritingWithMutableData: data)
+        keyedArchiver.requiresSecureCoding = true
+        queryItem1.encodeWithCoder(keyedArchiver)
+        keyedArchiver.finishEncoding()
+        
+        let keyedUnarchiver = NSKeyedUnarchiver(forReadingWithData: data)
+        keyedUnarchiver.requiresSecureCoding = true
+        if let queryItem2 = LXURLQueryItem(coder: keyedUnarchiver) {
+            XCTAssertEqual(queryItem1, queryItem2)
+        } else {
+            XCTFail()
+        }
+        keyedUnarchiver.finishDecoding()
+    }
+}
+
 class NSURLComponents_LXSupportKitTests: XCTestCase {
     func testConstructingQueryItems() {
         let urlComponents = NSURLComponents()
@@ -36,6 +90,20 @@ class NSURLComponents_LXSupportKitTests: XCTestCase {
         
         XCTAssertEqual(urlComponents.query!, "")
         XCTAssertTrue((urlComponents.lx_queryItems! as NSArray).isEqual([]))
+    }
+    
+    func testExtractingQueryItems() {
+        let urlComponents = NSURLComponents()
+        urlComponents.query = "&&=&hello&world=&say=hahahahah?&base64=aGFoYWhhaGFoPw=="
+        XCTAssertEqual(urlComponents.lx_queryItems! as! [LXURLQueryItem], [
+            LXURLQueryItem(),
+            LXURLQueryItem(),
+            LXURLQueryItem(name: "", value: ""),
+            LXURLQueryItem(name: "hello", value: nil),
+            LXURLQueryItem(name: "world", value: ""),
+            LXURLQueryItem(name: "say", value: "hahahahah?"),
+            LXURLQueryItem(name: "base64", value: "aGFoYWhhaGFoPw==")
+        ])
     }
     
     func testQueryWithURL() {

@@ -11,12 +11,25 @@
 
 #import "LXDefines.h"
 #import "LXHelpers.h"
+#import "LXURLQueryItem.h"
+
+@interface LXMockCoder : NSCoder
+@end
+@implementation LXMockCoder
+- (BOOL)allowsKeyedCoding { return NO; }
+@end
 
 @interface LXSupportKitTests : XCTestCase
-
 @end
 
 @implementation LXSupportKitTests
+
+- (void)testURLQueryItemThrows {
+    LXMockCoder *coder = [[LXMockCoder alloc] init];
+    
+    XCTAssertThrowsSpecificNamed([[LXURLQueryItem alloc] initWithCoder:coder], NSException, NSInvalidArgumentException);
+    XCTAssertThrowsSpecificNamed([[[LXURLQueryItem alloc] initWithName:@"hello" value:@"world"] encodeWithCoder:coder], NSException, NSInvalidArgumentException);
+}
 
 - (void)testDynamicCast {
     id foo = @"foo";
