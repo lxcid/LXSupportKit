@@ -83,6 +83,30 @@ class LXBooleanTransformerTests: XCTestCase {
         // FIXME: (me@lxcid.com) booleanTransformer.reverseTransformedValue(true)
     }
     
+    func testFromValue() {
+        let booleanTransformer = LXBooleanTransformer.sharedTransformer()
+        
+        XCTAssertNil(LXBooleanTransformer.fromValue(nil))
+        XCTAssertNil(LXBooleanTransformer.fromValue(NSDate()))
+        XCTAssertEqual(LXBooleanTransformer.fromValue("true")!, true)
+        XCTAssertEqual(LXBooleanTransformer.fromValue("false")!, false)
+        XCTAssertEqual(LXBooleanTransformer.fromValue("1")!, true)
+        XCTAssertEqual(LXBooleanTransformer.fromValue("0")!, false)
+        XCTAssertEqual(LXBooleanTransformer.fromValue("999")!, true)
+        XCTAssertEqual(LXBooleanTransformer.fromValue("-999")!, true)
+        XCTAssertNil(LXBooleanTransformer.fromValue("a"))
+        XCTAssertEqual(LXBooleanTransformer.fromValue(true)!, true)
+        XCTAssertEqual(LXBooleanTransformer.fromValue(false)!, false)
+        XCTAssertEqual(LXBooleanTransformer.fromValue(1)!, true)
+        XCTAssertEqual(LXBooleanTransformer.fromValue(0)!, false)
+        XCTAssertEqual(LXBooleanTransformer.fromValue(999)!, true)
+        XCTAssertEqual(LXBooleanTransformer.fromValue(-999)!, true)
+        
+        XCTAssertFalse(LXBooleanTransformer.allowsReverseTransformation())
+        
+        // FIXME: (me@lxcid.com) booleanTransformer.reverseTransformedValue(true)
+    }
+    
     func testTransformedValueClass() {
         let expectedClass: AnyClass = LXBooleanTransformer.transformedValueClass()
         if let result = LXBooleanTransformer.sharedTransformer().transformedValue("true") {

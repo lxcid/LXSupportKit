@@ -20,6 +20,8 @@ LXSUPPORTKIT_EXPORT NSString * const LXBooleanTransformerName;
 
 - (nullable NSNumber *)transformedValue:(nullable id)value;
 
++ (nullable NSNumber *)fromValue:(nullable id)value;
+
 @end
 
 NS_ASSUME_NONNULL_END

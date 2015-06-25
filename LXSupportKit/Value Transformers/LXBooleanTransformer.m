@@ -26,6 +26,10 @@ NSString * const LXBooleanTransformerName = @"LXBoolean";
     return booleanTransformer;
 }
 
++ (nullable NSNumber *)fromValue:(nullable id)value {
+    return [[self sharedTransformer] transformedValue:value];
+}
+
 #pragma mark - NSValueTransformer overrides
 
 + (Class)transformedValueClass {
