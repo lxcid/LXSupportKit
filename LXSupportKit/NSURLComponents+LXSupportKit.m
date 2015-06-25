@@ -85,14 +85,11 @@
     for (NSString *keyValuePair in keyValuePairs) {
         NSArray *keyValueArray = [keyValuePair componentsSeparatedByString:@"="];
         switch (keyValueArray.count) {
-            case 0: {
-                LXURLQueryItem *queryItem = [LXURLQueryItem queryItemWithName:@"" value:nil];
-                [queryItems addObject:queryItem];
-            } break;
+            case 0:
             case 1: {
-                NSString *name = keyValueArray[0];
+                NSString *name = keyValueArray.firstObject;
                 name = [name stringByRemovingPercentEncoding];
-                LXURLQueryItem *queryItem = [LXURLQueryItem queryItemWithName:name value:nil];
+                LXURLQueryItem *queryItem = [LXURLQueryItem queryItemWithName:name ?: @"" value:nil];
                 [queryItems addObject:queryItem];
             } break;
             case 2: {

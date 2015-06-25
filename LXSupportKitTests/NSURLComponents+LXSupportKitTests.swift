@@ -48,12 +48,11 @@ class LXURLQueryItemTests: XCTestCase {
         
         let keyedArchiver = NSKeyedArchiver(forWritingWithMutableData: data)
         keyedArchiver.setRequiresSecureCoding(true)
-        queryItem1.encodeWithCoder(keyedArchiver)
+        keyedArchiver.encodeObject(queryItem1, forKey: "hello world")
         keyedArchiver.finishEncoding()
         
         let keyedUnarchiver = NSKeyedUnarchiver(forReadingWithData: data)
-        keyedUnarchiver.setRequiresSecureCoding(true)
-        let queryItem2 = LXURLQueryItem(coder: keyedUnarchiver)
+        let queryItem2 = keyedUnarchiver.decodeObjectForKey("hello world") as! LXURLQueryItem
         XCTAssertEqual(queryItem1, queryItem2)
         keyedUnarchiver.finishDecoding()
     }
