@@ -84,8 +84,6 @@ class LXBooleanTransformerTests: XCTestCase {
     }
     
     func testFromValue() {
-        let booleanTransformer = LXBooleanTransformer.sharedTransformer()
-        
         XCTAssertNil(LXBooleanTransformer.fromValue(nil))
         XCTAssertNil(LXBooleanTransformer.fromValue(NSDate()))
         XCTAssertEqual(LXBooleanTransformer.fromValue("true")!, true)

@@ -21,6 +21,9 @@ LXSUPPORTKIT_EXPORT NSString * const LXNumberTransformerName;
 - (nullable NSNumber *)transformedValue:(nullable id)value;
 - (nullable NSString *)reverseTransformedValue:(nullable id)value;
 
++ (nullable NSNumber *)fromValue:(nullable id)value;
++ (nullable NSString *)toValue:(nullable id)value;
+
 @end
 
 NS_ASSUME_NONNULL_END

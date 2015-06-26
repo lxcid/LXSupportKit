@@ -96,7 +96,7 @@
                 NSString *name = keyValueArray[0];
                 name = [name stringByRemovingPercentEncoding];
                 NSString *value = keyValueArray[1];
-                value = [value stringByRemovingPercentEncoding];
+                value = [value stringByRemovingPercentEncoding] ?: @""; // FIXME: (stan@minus.com) See [1]
                 LXURLQueryItem *queryItem = [LXURLQueryItem queryItemWithName:name value:value];
                 [queryItems addObject:queryItem];
             } break;
@@ -105,13 +105,15 @@
                 name = [name stringByRemovingPercentEncoding];
                 NSRange valueRange = NSMakeRange(1, keyValueArray.count - 1);
                 NSString *value = [[keyValueArray subarrayWithRange:valueRange] componentsJoinedByString:@"="];
-                value = [value stringByRemovingPercentEncoding];
+                value = [value stringByRemovingPercentEncoding] ?: @""; // FIXME: (stan@minus.com) See [1]
                 LXURLQueryItem *queryItem = [LXURLQueryItem queryItemWithName:name value:value];
                 [queryItems addObject:queryItem];
             } break;
         }
     }
     return [queryItems copy];
+    
+    // [1] This is a fix for when in iOS 7, calling `-[NSString stringByRemovingPercentEncoding]` on an empty string return a `nil`. This behavior differ from iOS 8 and above which return back an empty string.
 }
 
 @end

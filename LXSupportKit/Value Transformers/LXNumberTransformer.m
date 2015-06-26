@@ -37,6 +37,14 @@ NSString * const LXNumberTransformerName = @"LXNumber";
     return numberTransformer;
 }
 
++ (nullable NSNumber *)fromValue:(nullable id)value {
+    return [[self sharedTransformer] transformedValue:value];
+}
+
++ (nullable NSString *)toValue:(nullable id)value {
+    return [[self sharedTransformer] reverseTransformedValue:value];
+}
+
 #pragma mark - NSValueTransformer overrides
 
 + (Class)transformedValueClass {

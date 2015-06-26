@@ -68,6 +68,24 @@ class LXNumberTransformerTests: XCTestCase {
         XCTAssertNil(numberTransformer.reverseTransformedValue("4.56"))
     }
     
+    func testFromToValue() {
+        
+        XCTAssertNil(LXNumberTransformer.fromValue(nil))
+        XCTAssertNil(LXNumberTransformer.fromValue(NSDate()))
+        XCTAssertEqual(LXNumberTransformer.fromValue(123)!, 123)
+        XCTAssertEqual(LXNumberTransformer.fromValue("456")!, 456)
+        XCTAssertEqual(LXNumberTransformer.fromValue(1.23)!, 1.23)
+        XCTAssertEqual(LXNumberTransformer.fromValue("4.56")!, 4.56)
+        
+        XCTAssertTrue(LXNumberTransformer.allowsReverseTransformation())
+        
+        XCTAssertNil(LXNumberTransformer.toValue(nil))
+        XCTAssertEqual(LXNumberTransformer.toValue(123)!, "123")
+        XCTAssertNil(LXNumberTransformer.toValue("456"))
+        XCTAssertEqual(LXNumberTransformer.toValue(1.23)!, "1.23")
+        XCTAssertNil(LXNumberTransformer.toValue("4.56"))
+    }
+    
     func testTransformedValueClass() {
         let expectedClass: AnyClass = LXNumberTransformer.transformedValueClass()
         if let result = LXNumberTransformer.sharedTransformer().transformedValue("1") {
