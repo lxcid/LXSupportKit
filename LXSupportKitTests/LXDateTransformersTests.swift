@@ -156,6 +156,29 @@ class LXISO8601DateTransformerTests: XCTestCase {
         }
     }
     
+    func testFromToValue() {
+        XCTAssertNil(LXISO8601DateTransformer.fromValue(nil))
+        XCTAssertNil(LXISO8601DateTransformer.fromValue(1))
+        
+        if let date = LXISO8601DateTransformer.fromValue("2015-06-22T02:24:18+0800") {
+            XCTAssertEqual(date, date001)
+        } else {
+            XCTFail()
+        }
+        
+        XCTAssertTrue(LXISO8601DateTransformer.allowsReverseTransformation())
+        
+        XCTAssertNil(LXISO8601DateTransformer.toValue(nil))
+        XCTAssertNil(LXISO8601DateTransformer.toValue(1))
+        
+        NSTimeZone.setDefaultTimeZone(self.newYorkTimeZone)
+        if let string = LXISO8601DateTransformer.toValue(date001) {
+            XCTAssertEqual(string, "2015-06-21T14:24:18-0400")
+        } else {
+            XCTFail()
+        }
+    }
+    
     func testTransformedValueClass() {
         let expectedClass: AnyClass = LXISO8601DateTransformer.transformedValueClass()
         if let result = LXISO8601DateTransformer.sharedTransformer().transformedValue("2015-06-22T02:24:18+0800") {

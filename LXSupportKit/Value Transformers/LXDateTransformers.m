@@ -34,6 +34,14 @@ NSString * const LXISO8601DateTransformerName = @"LXISO8601Date";
     return iso8601DateTransformer;
 }
 
++ (nullable NSDate *)fromValue:(nullable id)value {
+    return [[self sharedTransformer] transformedValue:value];
+}
+
++ (nullable NSString *)toValue:(nullable id)value {
+    return [[self sharedTransformer] reverseTransformedValue:value];
+}
+
 #pragma mark - Object Life Cycle
 
 - (instancetype)initWithTimeZone:(NSTimeZone *)timeZone {

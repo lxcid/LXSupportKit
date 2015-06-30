@@ -7,6 +7,7 @@
 #import "LXDelta.h"
 #import "LXDeltaCalculator.h"
 #import "LXDictionaryBuilder.h"
+#import "LXDictionaryReader.h"
 #import "LXHelpers.h"
 #import "LXKeyValueObserver.h"
 #import "LXNumberTransformer.h"

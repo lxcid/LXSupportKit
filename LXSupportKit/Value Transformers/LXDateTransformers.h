@@ -28,6 +28,9 @@ LXSUPPORTKIT_EXPORT NSString * const LXISO8601DateTransformerName;
 - (nullable NSDate *)transformedValue:(nullable id)value;
 - (nullable NSString *)reverseTransformedValue:(nullable id)value;
 
++ (nullable NSDate *)fromValue:(nullable id)value;
++ (nullable NSString *)toValue:(nullable id)value;
+
 @end
 
 NS_ASSUME_NONNULL_END
