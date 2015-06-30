@@ -38,4 +38,36 @@ class LXHelpersTests: XCTestCase {
         XCTAssertTrue(LXDoubleEqual(0.1 * 3.0, 0.3))
         XCTAssertTrue(LXDoubleEqual(1.2 / 3.0, 0.4))
     }
+    
+    func testFloor() {
+        XCTAssertEqual(LXCGFloor(1.00001), 1.0)
+        XCTAssertEqual(LXCGFloor(1.5), 1.0)
+        XCTAssertEqual(LXCGFloor(1.99999), 1.0)
+    }
+    
+    func testCeil() {
+        XCTAssertEqual(LXCGCeil(0.00001), 1.0)
+        XCTAssertEqual(LXCGCeil(0.5), 1.0)
+        XCTAssertEqual(LXCGCeil(0.99999), 1.0)
+    }
+    
+    func testFloorToViewScale() {
+        let view = UIView()
+        view.contentScaleFactor = 1.0
+        XCTAssertEqual(LXFloorToViewScale(0.8, view), 0.0)
+        view.contentScaleFactor = 2.0
+        XCTAssertEqual(LXFloorToViewScale(0.8, view), 0.5)
+        view.contentScaleFactor = 3.0
+        XCTAssertEqual(LXFloorToViewScale(0.8, view), 2.0 / 3.0)
+    }
+    
+    func testCeilToViewScale() {
+        let view = UIView()
+        view.contentScaleFactor = 1.0
+        XCTAssertEqual(LXCeilToViewScale(0.2, view), 1.0)
+        view.contentScaleFactor = 2.0
+        XCTAssertEqual(LXCeilToViewScale(0.2, view), 0.5)
+        view.contentScaleFactor = 3.0
+        XCTAssertEqual(LXCeilToViewScale(0.2, view), 1.0 / 3.0)
+    }
 }

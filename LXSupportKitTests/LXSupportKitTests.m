@@ -62,6 +62,15 @@
     }
 }
 
+// FIXME: (stan@minus.com) I have trouble executing this test in Swift, so we port it to Objective-C instead.
+- (void)testAdjustToScale {
+    XCTAssertEqual(LXAdjustToScale(LXCGFloor, 0.8, 0.0),
+                   LXAdjustToScale(LXCGFloor, 0.8, [[UIScreen mainScreen] scale]));
+    XCTAssertEqual(LXAdjustToScale(LXCGFloor, 0.8, 1.0), 0.0);
+    XCTAssertEqual(LXAdjustToScale(LXCGFloor, 0.8, 2.0), 0.5);
+    XCTAssertEqual(LXAdjustToScale(LXCGFloor, 0.8, 3.0), 2.0 / 3.0);
+}
+
 - (void)lx_assertOnMainThread {
     LXAssertMainThread();
 }
