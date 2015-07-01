@@ -17,6 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary NS_DESIGNATED_INITIALIZER;
 
+- (nullable NSArray *)arrayForKey:(id<NSCopying>)key;
 - (nullable NSNumber *)booleanForKey:(id<NSCopying>)key;
 - (nullable NSNumber *)numberForKey:(id<NSCopying>)key;
 - (nullable NSDate *)iso8601DateForKey:(id<NSCopying>)key;

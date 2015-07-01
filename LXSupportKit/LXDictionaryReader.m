@@ -23,6 +23,11 @@
     return self;
 }
 
+- (nullable NSArray *)arrayForKey:(id<NSCopying>)key {
+    id value = self.dictionary[key];
+    return [self _arrayFromValue:value];
+}
+
 - (nullable NSNumber *)booleanForKey:(nonnull id<NSCopying>)key {
     id value = self.dictionary[key];
     return [LXBooleanTransformer fromValue:value];
@@ -36,6 +41,19 @@
 - (nullable NSDate *)iso8601DateForKey:(nonnull id<NSCopying>)key {
     id value = self.dictionary[key];
     return [LXISO8601DateTransformer fromValue:value];
+}
+
+#pragma mark - Private
+
+- (NSArray *)_arrayFromValue:(id)value {
+    if (!value) {
+        return nil;
+    }
+    if ([value isKindOfClass:[NSArray class]]) {
+        return value;
+    } else {
+        return nil;
+    }
 }
 
 @end
