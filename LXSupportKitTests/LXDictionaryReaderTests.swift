@@ -16,6 +16,7 @@ class LXDictionaryReaderTests: XCTestCase {
             "one" : 1,
             "true" : true,
             "array" : [],
+            "string" : "Hello World!",
         ])
         XCTAssertEqual(reader.arrayForKey("array")! as NSArray, [])
         XCTAssertNil(reader.arrayForKey("one"))
@@ -23,5 +24,6 @@ class LXDictionaryReaderTests: XCTestCase {
         XCTAssertEqual(reader.numberForKey("one")!, 1)
         XCTAssertEqual(reader.booleanForKey("true")!, true)
         XCTAssertEqual(reader.iso8601DateForKey("ISO8601Date")!, NSDate(timeIntervalSince1970: 1434911058))
+        XCTAssertEqual(reader.stringForKey("string")!, "Hello World!")
     }
 }

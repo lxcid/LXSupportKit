@@ -12,6 +12,7 @@
 #import "LXDefines.h"
 #import "LXHelpers.h"
 #import "LXURLQueryItem.h"
+#import "LXStringTransformers.h"
 
 @interface LXMockCoder : NSCoder
 @end
@@ -69,6 +70,10 @@
     XCTAssertEqual(LXAdjustToScale(LXCGFloor, 0.8, 1.0), 0.0);
     XCTAssertEqual(LXAdjustToScale(LXCGFloor, 0.8, 2.0), 0.5);
     XCTAssertEqual(LXAdjustToScale(LXCGFloor, 0.8, 3.0), (CGFloat)2.0 / (CGFloat)3.0);
+}
+
+- (void)testStrictStringValueTransformerInitializationFailure {
+    XCTAssertThrowsSpecificNamed([[LXStrictStringTransformer alloc] initWithStrict:NO], NSException, NSInternalInconsistencyException);
 }
 
 - (void)lx_assertOnMainThread {

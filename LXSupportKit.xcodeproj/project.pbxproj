@@ -13,7 +13,10 @@
 		AB3DEB9B1B38943D0000B866 /* LXBooleanTransformer.h in Headers */ = {isa = PBXBuildFile; fileRef = AB3DEB991B38943D0000B866 /* LXBooleanTransformer.h */; };
 		AB3DEB9C1B38943D0000B866 /* LXBooleanTransformer.m in Sources */ = {isa = PBXBuildFile; fileRef = AB3DEB9A1B38943D0000B866 /* LXBooleanTransformer.m */; };
 		AB3DEB9E1B389AC70000B866 /* LXBooleanTransformerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB3DEB9D1B389AC70000B866 /* LXBooleanTransformerTests.swift */; };
+		AB5A0E151B43EB280056FB84 /* LXStringTransformersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB5A0E141B43EB280056FB84 /* LXStringTransformersTests.swift */; };
 		AB616E3C1B42712D000C1F11 /* LXDictionaryReaderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB616E3B1B42712D000C1F11 /* LXDictionaryReaderTests.swift */; };
+		AB8F41231B43AA7D006E3F23 /* LXStringTransformers.h in Headers */ = {isa = PBXBuildFile; fileRef = AB8F41211B43AA7D006E3F23 /* LXStringTransformers.h */; };
+		AB8F41241B43AA7D006E3F23 /* LXStringTransformers.m in Sources */ = {isa = PBXBuildFile; fileRef = AB8F41221B43AA7D006E3F23 /* LXStringTransformers.m */; };
 		AB93D2C61B34C45C00CB47E4 /* LXKeyValueObserver.h in Headers */ = {isa = PBXBuildFile; fileRef = AB93D2C41B34C45C00CB47E4 /* LXKeyValueObserver.h */; };
 		AB93D2C71B34C45C00CB47E4 /* LXKeyValueObserver.m in Sources */ = {isa = PBXBuildFile; fileRef = AB93D2C51B34C45C00CB47E4 /* LXKeyValueObserver.m */; };
 		AB93D2C91B34CB2000CB47E4 /* LXKeyValueObserverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB93D2C81B34CB2000CB47E4 /* LXKeyValueObserverTests.swift */; };
@@ -67,7 +70,10 @@
 		AB3DEB991B38943D0000B866 /* LXBooleanTransformer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXBooleanTransformer.h; sourceTree = "<group>"; };
 		AB3DEB9A1B38943D0000B866 /* LXBooleanTransformer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXBooleanTransformer.m; sourceTree = "<group>"; };
 		AB3DEB9D1B389AC70000B866 /* LXBooleanTransformerTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXBooleanTransformerTests.swift; sourceTree = "<group>"; };
+		AB5A0E141B43EB280056FB84 /* LXStringTransformersTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXStringTransformersTests.swift; sourceTree = "<group>"; };
 		AB616E3B1B42712D000C1F11 /* LXDictionaryReaderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXDictionaryReaderTests.swift; sourceTree = "<group>"; };
+		AB8F41211B43AA7D006E3F23 /* LXStringTransformers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXStringTransformers.h; sourceTree = "<group>"; };
+		AB8F41221B43AA7D006E3F23 /* LXStringTransformers.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXStringTransformers.m; sourceTree = "<group>"; };
 		AB93D2C41B34C45C00CB47E4 /* LXKeyValueObserver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXKeyValueObserver.h; sourceTree = "<group>"; };
 		AB93D2C51B34C45C00CB47E4 /* LXKeyValueObserver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXKeyValueObserver.m; sourceTree = "<group>"; };
 		AB93D2C81B34CB2000CB47E4 /* LXKeyValueObserverTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXKeyValueObserverTests.swift; sourceTree = "<group>"; };
@@ -199,6 +205,7 @@
 				AB93D2C81B34CB2000CB47E4 /* LXKeyValueObserverTests.swift */,
 				ABD40A571B36706E004168D2 /* LXNumberTransformerTests.swift */,
 				ABE85AFA1B35FF310047EFF1 /* LXScrollViewObserverTests.swift */,
+				AB5A0E141B43EB280056FB84 /* LXStringTransformersTests.swift */,
 				ABB3D5AC1B20ECF000F2A08A /* LXSupportKitTests.m */,
 				ABF505471B33BCC20077C616 /* LXSupportKitTests-Bridging-Header.h */,
 				AB0EAAAB1B3B475B00E1D165 /* NSURLComponents+LXSupportKitTests.swift */,
@@ -224,6 +231,8 @@
 				AB98C4421B37B44D00FAFF6D /* LXDateTransformers.m */,
 				ABD40A531B363BC7004168D2 /* LXNumberTransformer.h */,
 				ABD40A541B363BC7004168D2 /* LXNumberTransformer.m */,
+				AB8F41211B43AA7D006E3F23 /* LXStringTransformers.h */,
+				AB8F41221B43AA7D006E3F23 /* LXStringTransformers.m */,
 			);
 			path = "Value Transformers";
 			sourceTree = "<group>";
@@ -244,6 +253,7 @@
 				AB93D2C61B34C45C00CB47E4 /* LXKeyValueObserver.h in Headers */,
 				ABF5054E1B33C4D20077C616 /* LXDelta.h in Headers */,
 				ABB3D5BC1B20F15400F2A08A /* LXErrors.h in Headers */,
+				AB8F41231B43AA7D006E3F23 /* LXStringTransformers.h in Headers */,
 				ABE363141B3B023A00D15A68 /* LXURLQueryItem.h in Headers */,
 				AB999ADD1B368ADB00805D0F /* LXConstants.h in Headers */,
 				AB999AE11B373A4500805D0F /* LXDictionaryBuilder.h in Headers */,
@@ -351,6 +361,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ABF5054F1B33C4D20077C616 /* LXDelta.m in Sources */,
+				AB8F41241B43AA7D006E3F23 /* LXStringTransformers.m in Sources */,
 				AB999ADE1B368ADB00805D0F /* LXConstants.m in Sources */,
 				AB1B33201B42442900CB1CE4 /* LXDictionaryReader.m in Sources */,
 				ABB3D5BD1B20F15400F2A08A /* LXErrors.m in Sources */,
@@ -381,6 +392,7 @@
 				AB93D2C91B34CB2000CB47E4 /* LXKeyValueObserverTests.swift in Sources */,
 				AB616E3C1B42712D000C1F11 /* LXDictionaryReaderTests.swift in Sources */,
 				AB98C4461B37B96E00FAFF6D /* LXDateTransformersTests.swift in Sources */,
+				AB5A0E151B43EB280056FB84 /* LXStringTransformersTests.swift in Sources */,
 				ABE85AFB1B35FF310047EFF1 /* LXScrollViewObserverTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

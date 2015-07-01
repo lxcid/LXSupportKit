@@ -11,6 +11,7 @@
 #import "LXBooleanTransformer.h"
 #import "LXDateTransformers.h"
 #import "LXNumberTransformer.h"
+#import "LXStringTransformers.h"
 
 @implementation LXDictionaryReader
 
@@ -41,6 +42,11 @@
 - (nullable NSDate *)iso8601DateForKey:(nonnull id<NSCopying>)key {
     id value = self.dictionary[key];
     return [LXISO8601DateTransformer fromValue:value];
+}
+
+- (nullable NSString *)stringForKey:(nonnull id<NSCopying>)key {
+    id value = self.dictionary[key];
+    return [LXStringTransformer fromValue:value];
 }
 
 #pragma mark - Private
