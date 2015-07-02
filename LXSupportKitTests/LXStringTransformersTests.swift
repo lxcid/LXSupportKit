@@ -14,6 +14,7 @@ class LXStringTransformerTests: XCTestCase {
         let stringTransformer = LXStringTransformer()
         
         XCTAssertNil(stringTransformer.transformedValue(nil))
+        XCTAssertNil(stringTransformer.transformedValue(NSNull()))
         XCTAssertEqual(stringTransformer.transformedValue(123)!, "123")
         XCTAssertEqual(stringTransformer.transformedValue("456")!, "456")
         
@@ -29,6 +30,7 @@ class LXStringTransformerTests: XCTestCase {
     func testForName() {
         if let stringTransformer = NSValueTransformer(forName: LXStringTransformerName) as? LXStringTransformer {
             XCTAssertNil(stringTransformer.transformedValue(nil))
+            XCTAssertNil(stringTransformer.transformedValue(NSNull()))
             XCTAssertEqual(stringTransformer.transformedValue(123)!, "123")
             XCTAssertEqual(stringTransformer.transformedValue("456")!, "456")
             
@@ -42,6 +44,7 @@ class LXStringTransformerTests: XCTestCase {
         let stringTransformer = LXStringTransformer.sharedTransformer()
         
         XCTAssertNil(stringTransformer.transformedValue(nil))
+        XCTAssertNil(stringTransformer.transformedValue(NSNull()))
         XCTAssertEqual(stringTransformer.transformedValue(123)!, "123")
         XCTAssertEqual(stringTransformer.transformedValue("456")!, "456")
         
@@ -50,6 +53,7 @@ class LXStringTransformerTests: XCTestCase {
 
     func testFromValue() {
         XCTAssertNil(LXStringTransformer.fromValue(nil))
+        XCTAssertNil(LXStringTransformer.fromValue(NSNull()))
         XCTAssertEqual(LXStringTransformer.fromValue(123)!, "123")
         XCTAssertEqual(LXStringTransformer.fromValue("456")!, "456")
         
@@ -71,12 +75,14 @@ class LXStrictStringTransformerTests: XCTestCase {
         var strictStringTransformer = LXStrictStringTransformer()
         
         XCTAssertNil(strictStringTransformer.transformedValue(nil))
+        XCTAssertNil(strictStringTransformer.transformedValue(NSNull()))
         XCTAssertNil(strictStringTransformer.transformedValue(123))
         XCTAssertEqual(strictStringTransformer.transformedValue("456")!, "456")
         
         strictStringTransformer = LXStrictStringTransformer(strict: true)
         
         XCTAssertNil(strictStringTransformer.transformedValue(nil))
+        XCTAssertNil(strictStringTransformer.transformedValue(NSNull()))
         XCTAssertNil(strictStringTransformer.transformedValue(123))
         XCTAssertEqual(strictStringTransformer.transformedValue("456")!, "456")
         
@@ -86,6 +92,7 @@ class LXStrictStringTransformerTests: XCTestCase {
     func testForName() {
         if let strictStringTransformer = NSValueTransformer(forName: LXStrictStringTransformerName) as? LXStrictStringTransformer {
             XCTAssertNil(strictStringTransformer.transformedValue(nil))
+            XCTAssertNil(strictStringTransformer.transformedValue(NSNull()))
             XCTAssertNil(strictStringTransformer.transformedValue(123))
             XCTAssertEqual(strictStringTransformer.transformedValue("456")!, "456")
             
@@ -99,6 +106,7 @@ class LXStrictStringTransformerTests: XCTestCase {
         let strictStringTransformer = LXStrictStringTransformer.sharedTransformer()
         
         XCTAssertNil(strictStringTransformer.transformedValue(nil))
+        XCTAssertNil(strictStringTransformer.transformedValue(NSNull()))
         XCTAssertNil(strictStringTransformer.transformedValue(123))
         XCTAssertEqual(strictStringTransformer.transformedValue("456")!, "456")
         
@@ -107,6 +115,7 @@ class LXStrictStringTransformerTests: XCTestCase {
     
     func testFromValue() {
         XCTAssertNil(LXStrictStringTransformer.fromValue(nil))
+        XCTAssertNil(LXStrictStringTransformer.fromValue(NSNull()))
         XCTAssertNil(LXStrictStringTransformer.fromValue(123))
         XCTAssertEqual(LXStrictStringTransformer.fromValue("456")!, "456")
         

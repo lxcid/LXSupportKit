@@ -59,6 +59,8 @@ NSString * const LXStrictStringTransformerName = @"LXStrictString";
     }
     if ([value isKindOfClass:[NSString class]]) {
         return value;
+    } else if ([value isKindOfClass:[NSNull class]]) {
+        return nil;
     } else if (!self.isStrict) {
         return [value description];
     } else {
