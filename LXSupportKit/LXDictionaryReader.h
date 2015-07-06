@@ -19,8 +19,10 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (nullable NSArray *)arrayForKey:(id<NSCopying>)key;
 - (nullable NSNumber *)booleanForKey:(id<NSCopying>)key;
+- (nullable NSDictionary *)dictionaryForKey:(id<NSCopying>)key;
 - (nullable NSNumber *)numberForKey:(id<NSCopying>)key;
 - (nullable NSDate *)iso8601DateForKey:(id<NSCopying>)key;
+- (nullable NSString *)strictStringForKey:(id<NSCopying>)key;
 - (nullable NSString *)stringForKey:(id<NSCopying>)key;
 
 @end
