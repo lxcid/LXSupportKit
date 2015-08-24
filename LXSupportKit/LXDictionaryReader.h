@@ -25,6 +25,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (nullable NSString *)strictStringForKey:(id<NSCopying>)key;
 - (nullable NSString *)stringForKey:(id<NSCopying>)key;
 
+- (void)ifKeyExists:(id<NSCopying>)key execute:(void (^)(LXDictionaryReader *reader, id<NSCopying> key, id value))block;
+
 @end
 
 NS_ASSUME_NONNULL_END

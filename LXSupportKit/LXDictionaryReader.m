@@ -59,6 +59,14 @@
     return [LXStringTransformer fromValue:value];
 }
 
+- (void)ifKeyExists:(id<NSCopying>)key execute:(void (^)(LXDictionaryReader *reader, id<NSCopying> key, id value))block {
+    id value = self.dictionary[key];
+    if (!value) {
+        return;
+    }
+    block(self, key, value);
+}
+
 #pragma mark - Private
 
 - (nullable NSArray *)_arrayFromValue:(nullable id)value {
