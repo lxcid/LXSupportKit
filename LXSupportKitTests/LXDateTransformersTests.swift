@@ -216,3 +216,18 @@ class LXISO8601DateTransformerTests: XCTestCase {
         }
     }
 }
+
+class LXRFC1123DateTransformerTests: XCTestCase {
+    let date001 = NSDate(timeIntervalSince1970: 1434911058) // Sun, 21 Jun 2015 18:24:18 GMT
+    
+    func testFromToValue() {
+        XCTAssertNil(LXRFC1123DateTransformer.fromValue(nil))
+        XCTAssertNil(LXRFC1123DateTransformer.fromValue(1))
+        
+        XCTAssertEqual(LXRFC1123DateTransformer.fromValue("Sun, 21 Jun 2015 18:24:18 GMT")!, date001)
+        
+        XCTAssertTrue(LXRFC1123DateTransformer.allowsReverseTransformation())
+        
+        XCTAssertEqual(LXRFC1123DateTransformer.toValue(date001), "Sun, 21 Jun 2015 18:24:18 GMT")
+    }
+}

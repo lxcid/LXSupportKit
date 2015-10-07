@@ -13,6 +13,7 @@
 NS_ASSUME_NONNULL_BEGIN
 
 LXSUPPORTKIT_EXPORT NSString * const LXISO8601DateTransformerName;
+LXSUPPORTKIT_EXPORT NSString * const LXRFC1123DateTransformerName;
 
 /**
  * @discussion As `NSDateFormatter` stores a copy of `NSTimeZone`, it does not response to changes to default time zone even if we passes it `+[NSTimeZone localTimeZone]`. Thus, we store a reference of the time zone passed and manually check to make sure the time zone in `NSDateFormatter` does not goes out of sync with the reference time zone we hold.
@@ -24,6 +25,20 @@ LXSUPPORTKIT_EXPORT NSString * const LXISO8601DateTransformerName;
 
 - (instancetype)initWithTimeZone:(NSTimeZone *)timeZone NS_DESIGNATED_INITIALIZER;
 - (instancetype)init;
+
+- (nullable NSDate *)transformedValue:(nullable id)value;
+- (nullable NSString *)reverseTransformedValue:(nullable id)value;
+
++ (nullable NSDate *)fromValue:(nullable id)value;
++ (nullable NSString *)toValue:(nullable id)value;
+
+@end
+
+@interface LXRFC1123DateTransformer : NSValueTransformer
+
++ (instancetype)sharedTransformer;
+
+- (instancetype)init NS_DESIGNATED_INITIALIZER;
 
 - (nullable NSDate *)transformedValue:(nullable id)value;
 - (nullable NSString *)reverseTransformedValue:(nullable id)value;
