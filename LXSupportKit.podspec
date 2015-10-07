@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = "LXSupportKit"
-  s.version          = "0.1.1"
+  s.version          = "0.1.2"
   s.summary          = "A collection of codes to support my iOS development."
   s.description      = <<-DESC
                        A collection of codes to support my iOS development.
