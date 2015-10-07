@@ -31,5 +31,11 @@ class LXDictionaryReaderTests: XCTestCase {
         XCTAssertNil(reader.dictionaryForKey("nil"))
         XCTAssertEqual(reader.strictStringForKey("string")!, "Hello World!")
         XCTAssertNil(reader.strictStringForKey("one"))
+        reader.ifKeyExists("non-existent key") { (reader, key, value) in
+            XCTFail()
+        }
+        reader.ifKeyExists("one") { (reader, key, value) in
+            XCTAssertTrue(value is Int && (value as! Int) == 1)
+        }
     }
 }

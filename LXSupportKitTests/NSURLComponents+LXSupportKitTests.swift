@@ -47,7 +47,7 @@ class LXURLQueryItemTests: XCTestCase {
         let data = NSMutableData()
         
         let keyedArchiver = NSKeyedArchiver(forWritingWithMutableData: data)
-        keyedArchiver.setRequiresSecureCoding(true)
+        keyedArchiver.requiresSecureCoding = true
         keyedArchiver.encodeObject(queryItem1, forKey: "hello world")
         keyedArchiver.finishEncoding()
         
