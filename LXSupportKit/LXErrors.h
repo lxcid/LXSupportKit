@@ -11,3 +11,9 @@
 #import "LXDefines.h"
 
 LXSUPPORTKIT_EXTERN NSString * const LXSupportKitErrorDomain;
+
+/// `LXErrorCode` codes are used for errors in the domain `LXSupportKitErrorDomain`.
+typedef NS_ENUM(NSInteger, LXErrorCode) {
+    /// The operation is in an invalid state and could not continue.
+    LXErrorCodeInvalidState = 1,
+};
