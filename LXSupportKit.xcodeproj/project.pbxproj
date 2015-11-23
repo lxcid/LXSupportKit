@@ -28,6 +28,8 @@
 		AB999AE11B373A4500805D0F /* LXDictionaryBuilder.h in Headers */ = {isa = PBXBuildFile; fileRef = AB999ADF1B373A4500805D0F /* LXDictionaryBuilder.h */; };
 		AB999AE21B373A4500805D0F /* LXDictionaryBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = AB999AE01B373A4500805D0F /* LXDictionaryBuilder.m */; };
 		AB999AE41B373FE600805D0F /* LXDictionaryBuilderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB999AE31B373FE600805D0F /* LXDictionaryBuilderTests.swift */; };
+		AB9CD5461C03DEDD00164AB1 /* LXTargetAction.h in Headers */ = {isa = PBXBuildFile; fileRef = AB9CD5441C03DEDD00164AB1 /* LXTargetAction.h */; };
+		AB9CD5471C03DEDD00164AB1 /* LXTargetAction.m in Sources */ = {isa = PBXBuildFile; fileRef = AB9CD5451C03DEDD00164AB1 /* LXTargetAction.m */; };
 		ABB3D5A01B20ECF000F2A08A /* LXSupportKit.h in Headers */ = {isa = PBXBuildFile; fileRef = ABB3D59F1B20ECF000F2A08A /* LXSupportKit.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		ABB3D5A61B20ECF000F2A08A /* LXSupportKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ABB3D59A1B20ECF000F2A08A /* LXSupportKit.framework */; };
 		ABB3D5AD1B20ECF000F2A08A /* LXSupportKitTests.m in Sources */ = {isa = PBXBuildFile; fileRef = ABB3D5AC1B20ECF000F2A08A /* LXSupportKitTests.m */; };
@@ -85,6 +87,8 @@
 		AB999ADF1B373A4500805D0F /* LXDictionaryBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXDictionaryBuilder.h; sourceTree = "<group>"; };
 		AB999AE01B373A4500805D0F /* LXDictionaryBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXDictionaryBuilder.m; sourceTree = "<group>"; };
 		AB999AE31B373FE600805D0F /* LXDictionaryBuilderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LXDictionaryBuilderTests.swift; sourceTree = "<group>"; };
+		AB9CD5441C03DEDD00164AB1 /* LXTargetAction.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LXTargetAction.h; sourceTree = "<group>"; };
+		AB9CD5451C03DEDD00164AB1 /* LXTargetAction.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LXTargetAction.m; sourceTree = "<group>"; };
 		ABB3D59A1B20ECF000F2A08A /* LXSupportKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = LXSupportKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ABB3D59E1B20ECF000F2A08A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ABB3D59F1B20ECF000F2A08A /* LXSupportKit.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LXSupportKit.h; sourceTree = "<group>"; };
@@ -175,10 +179,12 @@
 				ABE85AF61B35FDF50047EFF1 /* LXScrollViewObserver.h */,
 				ABE85AF71B35FDF50047EFF1 /* LXScrollViewObserver.m */,
 				ABB3D59F1B20ECF000F2A08A /* LXSupportKit.h */,
-				ABE3630E1B3AEFEC00D15A68 /* NSURLComponents+LXSupportKit.h */,
-				ABE3630F1B3AEFEC00D15A68 /* NSURLComponents+LXSupportKit.m */,
+				AB9CD5441C03DEDD00164AB1 /* LXTargetAction.h */,
+				AB9CD5451C03DEDD00164AB1 /* LXTargetAction.m */,
 				ABE363121B3B023A00D15A68 /* LXURLQueryItem.h */,
 				ABE363131B3B023A00D15A68 /* LXURLQueryItem.m */,
+				ABE3630E1B3AEFEC00D15A68 /* NSURLComponents+LXSupportKit.h */,
+				ABE3630F1B3AEFEC00D15A68 /* NSURLComponents+LXSupportKit.m */,
 				ABD40A521B363BB3004168D2 /* Value Transformers */,
 				ABB3D59D1B20ECF000F2A08A /* Supporting Files */,
 			);
@@ -249,6 +255,7 @@
 				ABB3D5A01B20ECF000F2A08A /* LXSupportKit.h in Headers */,
 				ABE85AF81B35FDF50047EFF1 /* LXScrollViewObserver.h in Headers */,
 				AB3DEB9B1B38943D0000B866 /* LXBooleanTransformer.h in Headers */,
+				AB9CD5461C03DEDD00164AB1 /* LXTargetAction.h in Headers */,
 				ABD40A551B363BC7004168D2 /* LXNumberTransformer.h in Headers */,
 				AB93D2C61B34C45C00CB47E4 /* LXKeyValueObserver.h in Headers */,
 				ABF5054E1B33C4D20077C616 /* LXDelta.h in Headers */,
@@ -364,6 +371,7 @@
 				AB8F41241B43AA7D006E3F23 /* LXStringTransformers.m in Sources */,
 				AB999ADE1B368ADB00805D0F /* LXConstants.m in Sources */,
 				AB1B33201B42442900CB1CE4 /* LXDictionaryReader.m in Sources */,
+				AB9CD5471C03DEDD00164AB1 /* LXTargetAction.m in Sources */,
 				ABB3D5BD1B20F15400F2A08A /* LXErrors.m in Sources */,
 				AB999AE21B373A4500805D0F /* LXDictionaryBuilder.m in Sources */,
 				ABF505511B33C4D20077C616 /* LXDeltaCalculator.m in Sources */,
